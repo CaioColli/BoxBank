@@ -1,0 +1,485 @@
+html, body {
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  position: fixed top;
+  width: 100%;
+  z-index: 2;
+}
+header div {
+  align-items: center;
+  display: flex;
+  height: 60px;
+}
+header img {
+  margin-left: 32px;
+  width: 35px;
+}
+header ul {
+  display: flex;
+  margin-left: 32px;
+}
+header ul li {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header div {
+  margin-right: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header div p {
+  cursor: pointer;
+}
+
+main {
+  background-image: url("/imagens/modelos/Foto_capa.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+main .conteudo_main {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - 60px);
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .conteudo_main div {
+  align-items: center;
+  background-color: rgba(200, 0, 0, 0.5);
+  display: flex;
+  height: 350px;
+  justify-content: center;
+  width: 700px;
+  border-radius: 40% 100% 80% 100%;
+}
+main .conteudo_main div span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  width: 500px;
+}
+main .conteudo_main form {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  margin-right: 80px;
+  right: 0;
+  width: 250px;
+}
+main .conteudo_main form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-top: 20px;
+  width: 150px;
+}
+main .conteudo_main form .input_cpf {
+  background-color: transparent;
+  border-bottom: 2px solid #C1C1C1;
+  height: 22px;
+  margin-left: 39px;
+  margin-top: 40px;
+  width: 176px;
+}
+main .conteudo_main form .input_cpf:focus {
+  transition: 1.5s;
+  border-bottom: 2px solid #C80000;
+  outline: none;
+}
+main .conteudo_main form p {
+  font-size: 0.75rem;
+  color: #C80000;
+  display: none;
+  margin-left: 35px;
+  margin-top: 5px;
+  width: 200px;
+}
+main .conteudo_main form .btn_submit {
+  background-color: #C1C1C1;
+  background-image: url(/imagens/icones/seta_cinza.svg);
+  background-position: calc(100% - 16px) center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: #ACACAC;
+  cursor: not-allowed;
+  font-size: 12px;
+  height: 27px;
+  margin-left: 59px;
+  margin-top: 31px;
+  width: 136px;
+}
+main .conteudo_main form .btn_submit_vermelho {
+  background-color: #C80000;
+  background-image: url(/imagens/icones/seta_branca.svg);
+  background-position: calc(100% - 16px) center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  height: 27px;
+  margin-left: 59px;
+  margin-top: 31px;
+  width: 136px;
+}
+
+section .titulo_vantagens {
+  margin-top: 4rem;
+  margin: 64px 55px 64px 55px;
+}
+section .titulo_vantagens h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+section .titulo_vantagens p {
+  font-size: 2rem;
+  width: 342px;
+}
+section .cards_vantagens {
+  display: flex;
+  margin: 0 0 200px 55px;
+}
+section .cards_vantagens .card {
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  height: 250px;
+  margin-right: 60px;
+  width: 250px;
+}
+section .cards_vantagens .card div {
+  margin: 0;
+  margin-left: 16px;
+}
+section .cards_vantagens .card div i {
+  margin-top: 32px;
+}
+section .cards_vantagens .card div h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+section .cards_vantagens .card div p {
+  font-size: 1rem;
+  margin-bottom: 0px;
+  margin-top: 28px;
+  width: 190px;
+}
+section .cards_vantagens .card div button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #C80000;
+  cursor: pointer;
+  padding-bottom: 3px;
+  transition: border-bottom 0.3s ease;
+}
+section .cards_vantagens .card div button:hover {
+  border-bottom: 5px solid #C80000;
+  border-radius: 3px;
+}
+section .grid_shopping {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section .grid_shopping .left .titulo_shopping {
+  margin: 64px 55px 64px 55px;
+}
+section .grid_shopping .left .titulo_shopping h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+section .grid_shopping .left .titulo_shopping p {
+  font-size: 2rem;
+  width: 630px;
+}
+section .grid_shopping .left .cards_shopping {
+  display: flex;
+  margin-left: 55px;
+}
+section .grid_shopping .left .cards_shopping .card {
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  height: 140px;
+  justify-content: center;
+  width: 140px;
+  margin-right: 60px;
+  border-radius: 5000px;
+}
+section .grid_shopping .left .cards_shopping .card:nth-child(odd) img {
+  width: 70px;
+}
+section .grid_shopping .left .cards_shopping .card:nth-child(even) img {
+  width: 50px;
+}
+section .grid_shopping .right {
+  text-align: center;
+}
+section .grid_shopping .right img {
+  border-radius: 5000px;
+}
+section .grid_shopping .parcerias_shopping {
+  margin-left: 55px;
+  margin: 0 0 200px 55px;
+}
+section .grid_shopping .parcerias_shopping h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+section .grid_shopping .parcerias_shopping .lojas {
+  display: flex;
+}
+
+.investimentos .grid_investimentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 200px 55px;
+}
+.investimentos .grid_investimentos .left img {
+  width: 50px;
+}
+.investimentos .grid_investimentos .left div h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 32px 0 50px 0;
+}
+.investimentos .grid_investimentos .left div p {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  width: 530px;
+}
+.investimentos .grid_investimentos .left ul div div {
+  padding: 16px 0;
+}
+.investimentos .grid_investimentos .left ul div div li {
+  font-size: 3rem;
+  font-weight: bold;
+  align-items: center;
+  color: #E1E1E1;
+  cursor: default;
+  display: flex;
+}
+.investimentos .grid_investimentos .left ul div div li i {
+  display: none;
+  font-size: 16px;
+  margin-right: 8px;
+}
+.investimentos .grid_investimentos .left ul div div li:hover {
+  color: #000000;
+}
+.investimentos .grid_investimentos .left ul div div li:hover i {
+  display: block;
+}
+.investimentos .grid_investimentos .left ul div div li:hover + span {
+  display: block;
+}
+.investimentos .grid_investimentos .left ul div span {
+  font-size: 1.5rem;
+  display: none;
+  margin-top: 10px;
+}
+.investimentos .grid_investimentos .right {
+  text-align: center;
+}
+.investimentos .grid_produtos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 200px 55px;
+}
+.investimentos .grid_produtos .left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #C80000;
+  margin-bottom: 140px;
+  text-decoration: line-through;
+  width: 320px;
+}
+.investimentos .grid_produtos .right .conteudo_investimento {
+  margin-bottom: 140px;
+}
+.investimentos .grid_produtos .right .conteudo_investimento h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.investimentos .grid_produtos .right .conteudo_investimento p {
+  font-size: 1.5rem;
+  padding: 32px 0;
+  width: 660px;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div div {
+  padding: 16px 0;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div div li {
+  font-size: 3rem;
+  font-weight: bold;
+  align-items: center;
+  color: #E1E1E1;
+  cursor: default;
+  display: flex;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div div li i {
+  display: none;
+  font-size: 16px;
+  margin-right: 8px;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div div li:hover {
+  color: #000000;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div div li:hover i {
+  display: block;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div div li:hover + span {
+  display: block;
+}
+.investimentos .grid_produtos .right .conteudo_investimento ul div span {
+  font-size: 1.5rem;
+  display: none;
+  margin-top: 10px;
+}
+.investimentos .grid_abrirConta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 150px 55px;
+}
+.investimentos .grid_abrirConta .left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  width: 280px;
+}
+.investimentos .grid_abrirConta .left ul li:first-child:hover {
+  color: #C80000;
+}
+.investimentos .grid_abrirConta .left ul li {
+  font-size: 1.5rem;
+  padding: 16px 0;
+}
+.investimentos .grid_abrirConta .left ul li a {
+  cursor: pointer;
+}
+.investimentos .grid_abrirConta .left ul li span {
+  color: #C80000;
+}
+.investimentos .grid_abrirConta .left .cards_abrirConta {
+  display: flex;
+  align-items: center;
+}
+.investimentos .grid_abrirConta .left .cards_abrirConta .seta {
+  margin: 85px 64px 0 64px;
+}
+.investimentos .grid_abrirConta .left .cards_abrirConta .card {
+  align-items: center;
+  background-color: #000000;
+  border-radius: 5000px;
+  display: flex;
+  height: 140px;
+  justify-content: center;
+  width: 140px;
+  margin-top: 85px;
+}
+.investimentos .grid_abrirConta .left .cards_abrirConta .card img {
+  width: 70px;
+}
+.investimentos .grid_abrirConta .right {
+  text-align: center;
+}
+.investimentos .grid_abrirConta .right img {
+  border-radius: 5000px;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  padding: 55px 0;
+  justify-content: left;
+}
+footer .left {
+  margin-left: 55px;
+  text-align: center;
+}
+footer .left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+footer .left h2:nth-child(1) {
+  margin-bottom: 32px;
+}
+footer .left .cards_footer .card {
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  display: flex;
+  height: 80px;
+  margin: 16px 0;
+  width: 300px;
+}
+footer .left .cards_footer .card:nth-child(2) {
+  margin-bottom: 30px;
+}
+footer .left .cards_footer i {
+  margin: 0 16px 0 22px;
+}
+footer .left .cards_footer div p {
+  font-size: 1.5rem;
+}
+footer .center {
+  margin-left: 100px;
+}
+footer .center h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+footer .center ul li {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-top: 24px;
+}
+footer .center ul li:hover {
+  color: #C80000;
+}
+footer .right {
+  margin-left: auto;
+  margin-right: 95px;
+}
+footer .right h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+footer .right p {
+  font-size: 1.5rem;
+  width: 230px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #C80000;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}/*# sourceMappingURL=style.css.map */

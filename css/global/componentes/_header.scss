@@ -1,0 +1,36 @@
+@import './fontes';
+
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed top;
+    width: 100%;
+    z-index: 2;
+    div {
+        align-items: center;
+        display: flex;
+        height: 60px;
+    }
+    img {
+        margin-left: 32px;
+        width: 35px;
+    }
+    
+    ul {
+        display: flex;
+        margin-left: 32px;
+        li {
+            padding: 1rem;
+            @include fonte_Peso_16px;
+        }
+    }
+
+    div {
+        margin-right: 2rem;
+        @include fonte_Peso_16px;
+        p {
+            cursor: pointer;
+        }
+    }
+}
