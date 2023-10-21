@@ -1,7 +1,7 @@
 @import './cores';
 
 main {
-    background-image: url('/imagens/modelos/Foto_capa.png');
+    background-image: url('../../imagens/modelos/Foto_capa.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -73,7 +73,7 @@ main {
 
             .btn_submit {
                 background-color: $background_cinza;
-                background-image: url(/imagens/icones/seta_cinza.svg);
+                background-image: url('../../imagens/icones/seta_cinza.svg');
                 background-position: calc(100% - 16px) center;
                 background-repeat: no-repeat;
                 border-radius: 20px;
@@ -89,7 +89,7 @@ main {
             // Estilização para o JavaScript
             .btn_submit_vermelho {
                 background-color: $background_vermelho;
-                background-image: url(/imagens/icones/seta_branca.svg);
+                background-image: url('../../imagens/icones/seta_branca.svg');
                 background-position: calc(100% - 16px) center;
                 background-repeat: no-repeat;
                 border-radius: 20px;

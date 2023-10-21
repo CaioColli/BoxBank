@@ -4,8 +4,12 @@
         grid-template-columns: 1fr 1fr;
         margin: 0 0 200px 55px;
         .left {
-            img {
-                width: 50px
+            .imagem {
+                background-image: url(../../../imagens/icones/IconeBoxBank.png);
+                background-repeat: no-repeat;
+                background-size: 45px;
+                height: 50px;
+                width: 50px;
             }
 
             div {
@@ -78,7 +82,6 @@
         }
         .right {
             .conteudo_investimento {
-                margin-bottom: 140px;
                 h1 {
                     @include fonte_Peso_48px;
                 }
@@ -127,10 +130,11 @@
             }
         }
     }
+    
     .grid_abrirConta {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 0 0 150px 55px;
+        margin: 140px 0 150px 55px;
         .left {
             h2 {
                 @include fonte_Peso_32px;
@@ -160,7 +164,12 @@
                 display: flex;
                 align-items: center;
                 .seta {
+                    background-image: url(../../../imagens/icones/seta_vermelha.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 140px;
                     margin: 85px 64px 0 64px;
+                    width: 140px;
                 }
                 .card {
                     align-items: center;
@@ -171,17 +180,33 @@
                     justify-content: center;
                     width: 140px;
                     margin-top: 85px;
-                    img {
-                        width: 70px;
-                    }
+                }
+
+                @mixin formatacao {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 140px;
+                    width: 140px;
+                }
+
+                .primeiro {
+                    @include formatacao;
+                    background-image: url(../../../imagens/icones/icone_dinheiro.svg);
+                }
+
+                .segundo {
+                    @include formatacao;
+                    background-image: url(../../../imagens/icones/Icone_saco_dinheiro.svg);
                 }
             }
         }
         .right {
+            background-image: url(../../../imagens/modelos/Imagem_Investimento.png);
+            border-radius: 5000px;
+            height: 500px;
+            margin: 0 auto;
             text-align: center;
-            img {
-                border-radius: 5000px;
-            }
+            width: 500px;
         }
     }
 }

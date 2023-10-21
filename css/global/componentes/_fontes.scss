@@ -20,6 +20,15 @@ html, body {
     font-weight: bold;
 }
 
+@mixin fonte_20px {
+    font-size: 1.25rem;
+}
+
+@mixin fonte_Peso_24px {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 @mixin fonte_24px {
     font-size: 1.5rem;
 }

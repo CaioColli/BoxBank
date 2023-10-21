@@ -14,16 +14,49 @@
 <body>
 
     <header>
-        <div>
-            <img src="./imagens/icones/IconeBoxBank.png" alt="" class="iconeBoxBank">
-            <ul>
-                <li>Página inicial</li>
-                <li>Para você <i class="fa-solid fa-chevron-down fa-2xs" style="color: #000000;"></i> </li>
-                <li>Perguntas</li>
-            </ul>
+        <div class="conteudo_header">
+            <div>
+                <div class="imagem"></div>
+                <ul>
+                    <li>Página inicial</li>
+                    <li id="mostrar_conteudo">Para você <i class="fa-solid fa-chevron-down fa-2xs"
+                            style="color: #000000;"></i> </li>
+                    <li>Perguntas</li>
+                </ul>
+            </div>
+            <div>
+                <a href="">
+                    <p>Login <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ff0000;"></i></p>
+                </a>
+            </div>
         </div>
-        <div>
-            <a href=""><p>Login <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ff0000;"></i></p></a>
+
+        <div class=conteudo_paraVoce>
+            <ul class="lista">
+                <ul>
+                    <h3>BoxBank</h3>
+                    <li>Conta do BoxBank</li>
+                    <li>Cartão de crédito</li>
+                    <li>Sobre o Pix </li>
+                </ul>
+                <ul>
+                    <h3>Cartões Box</h3>
+                    <li>Cores</li>
+                    <li>Cashback</li>
+                </ul>
+                <ul>
+                    <h3>Box Shopping</h3>
+                    <li>Parcerias</li>
+                    <li>Facilidades</li>
+                    <li>Promoções</li>
+                </ul>
+                <ul>
+                    <h3>Box Investimentos</h3>
+                    <li>Produtos mais polulares</li>
+                    <li>Como investir</li>
+                    <li>Corretagem</li>
+                </ul>
+            </ul>
         </div>
     </header>
 
@@ -57,7 +90,7 @@
                 <div>
                     <!-- fa-lg TALVEZ -->
                     <i class="fa-solid fa-credit-card fa-xl" style="color: #000000;"></i>
-                    <h3>Cartões Box</h3>
+                    <h4>Cartões Box</h4>
                     <p>Escolha o design do seu cartão que mais combina com você.</p>
                     <button>Veja as opções <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
                 </div>
@@ -65,7 +98,7 @@
             <div class="card">
                 <div>
                     <i class="fa-solid fa-credit-card fa-xl" style="color: #000000;"></i>
-                    <h3>Cartão Virtual</h3>
+                    <h4>Cartão Virtual</h4>
                     <p>Crie novos cartões virtuais de crédito e débito no app e se proteja ainda mais.</p>
                     <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
                 </div>
@@ -73,7 +106,7 @@
             <div class="card">
                 <div>
                     <i class="fa-solid fa-money-bill-wave fa-xl" style="color: #000000;"></i>
-                    <h3>Pix</h3>
+                    <h4>Pix</h4>
                     <p>Um novo jeito de fazer pagamentos a hora que preferir.</p>
                     <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
                 </div>
@@ -81,7 +114,7 @@
             <div class="card">
                 <div>
                     <i class="fa-solid fa-arrow-trend-up fa-xl" style="color: #000000;"></i>
-                    <h3>Investimentos</h3>
+                    <h4>Investimentos</h4>
                     <p>Uma carteira completa para qualquer tipo de perfil de investidor.</p>
                     <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
                 </div>
@@ -89,7 +122,7 @@
             <div class="card">
                 <div>
                     <i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>
-                    <h3>Box Shopping</h3>
+                    <h4>Box Shopping</h4>
                     <p>Um shopping que oferece o que você precisa com cashback até de 15% </p>
                     <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
                 </div>
@@ -100,33 +133,31 @@
             <div class="left">
                 <div class="titulo_shopping">
                     <h2>Box Shopping</h2>
-                    <p>Faça sua compras nas maiores lojas do país com cashback e descontos imperdiveis.  </p>
+                    <p>Faça sua compras nas maiores lojas do país com cashback e descontos imperdiveis. </p>
                 </div>
-        
+
                 <div class="cards_shopping">
                     <div class="card">
-                        <img src="imagens/icones/Icone_CashBack.svg" alt="">
+                        <div class="primeiro"></div>
                     </div>
                     <div class="card">
-                        <img src="imagens/icones/Icone_SmartPhone.svg" alt="">
+                        <div class="segundo"></div>
                     </div>
                     <div class="card">
-                        <img src="imagens/icones/Icone_Shopping.svg" alt="">
+                        <div class="terceiro"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="right">
-                <img src="imagens/modelos/Imagem_shopping.png" alt="">
-            </div>
+            <div class="right"></div>
 
             <div class="parcerias_shopping">
                 <h2>Parcerias Box</h2>
                 <div class="lojas">
-                    <div class="loja"><img src="imagens/lojas/Magalu.png" alt=""></div>
-                    <div class="loja"><img src="imagens/lojas/CasasBahia.png" alt=""></div>
-                    <div class="loja"><img src="imagens/lojas/Centauro.png" alt=""></div>
-                    <div class="loja"><img src="imagens/lojas/FastShop.png" alt=""></div>
+                    <div class="loja_1"></div>
+                    <div class="loja_2"></div>
+                    <div class="loja_3"></div>
+                    <div class="loja_4"></div>
                 </div>
             </div>
         </div>
@@ -135,7 +166,7 @@
     <section class="investimentos">
         <div class="grid_investimentos">
             <div class="left">
-                <img src="imagens/icones/IconeBoxBank.png" alt="">
+                <div class="imagem"></div>
                 <div>
                     <h1>Aplicativo BoxBank</h1>
                     <p>Para quem está no começo e quer aprender a investir com segurança</p>
@@ -144,10 +175,10 @@
                     <div>
                         <div>
                             <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Sem Complexidade</li>
-                            <span>Experiência  fácil e intuitiva</span>
+                            <span>Experiência fácil e intuitiva</span>
                         </div>
                     </div>
-                    
+
                     <div>
                         <div>
                             <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Taxa Zero</li>
@@ -178,10 +209,10 @@
                 <div class="conteudo_investimento">
                     <h1>Investir é feito para você !</h1>
                     <p>Despeça-se de todos os equívocos que você já ouviu sobre investimentos.
-                    <br>
-                    Para você aprender, planejar, diversificar e alcançar seus sonhos.    
+                        <br>
+                        Para você aprender, planejar, diversificar e alcançar seus sonhos.
                     </p>
-                    
+
                 </div>
 
                 <div class="conteudo_investimento">
@@ -195,14 +226,14 @@
                                 <span>Portfólio com milhares de produtos</span>
                             </div>
                         </div>
-                        
+
                         <div>
                             <div>
                                 <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Corretagem Zero</li>
                                 <span>Para renda fixa, ações e BDRs</span>
                             </div>
                         </div>
-    
+
                         <div>
                             <div>
                                 <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Praticidade</li>
@@ -217,29 +248,29 @@
         <div class="grid_abrirConta">
             <div class="left">
                 <h2>Aproveite a taxa zero para:</h2>
-                
+
                 <ul>
-                    <a href=""><li>Abrir sua conta
-                        <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ff0000;"></i>
-                    </li></a>
+                    <a href="">
+                        <li>Abrir sua conta
+                            <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ff0000;"></i>
+                        </li>
+                    </a>
                     <li>Manter seu dinheiro em <span>custódia</span></li>
                     <li>Investir em ações, BDRs e muitos mais sem corretagem</li>
                 </ul>
 
                 <div class="cards_abrirConta">
                     <div class="card">
-                        <img src="imagens/icones/Icone_dinheiro.svg" alt="">
+                        <div class="primeiro"></div>
                     </div>
-                    <img src="imagens/icones/seta_vermelha.svg" alt="" class="seta">
+                    <div class="seta"></div>
                     <div class="card">
-                        <img src="imagens/icones/Icone_saco_dinheiro.svg" alt="">
+                        <div class="segundo"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="right">
-                <img src="imagens/modelos/Imagem_Investimento.png" alt="">
-            </div>
+            <div class="right"></div>
         </div>
     </section>
 
@@ -250,17 +281,19 @@
                 <div class="card">
                     <i class="fa-brands fa-google-play fa-2xl" style="color: #ffffff;"></i>
                     <div>
-                        <p>Disponível no <h2>Google Play</h2></p>
+                        <p>Disponível no <h2>Google Play</h2>
+                        </p>
                     </div>
                 </div>
                 <div class="card">
                     <i class="fa-brands fa-apple fa-2xl" style="color: #ffffff;"></i>
                     <div>
-                        <p>Disponível no <h2>App Store</h2></p>
+                        <p>Disponível no <h2>App Store</h2>
+                        </p>
                     </div>
                 </div>
             </div>
-            <img src="imagens/icones/IconeBoxBank.png" alt="">
+            <div class="imagem"></div>
         </div>
 
         <div class="center">
@@ -277,11 +310,11 @@
         <div class="right">
             <h2>Sobre</h2>
             <p>Projeto afins de estudo se tratando de um projeto ao portfólio profissional de Caio Colli</p>
-        </div> 
+        </div>
     </footer>
 
-    <script type="module" src="/script/script.js"></script>
-
+    <script src="script/valida_cpf.js"></script>
+    <script src="script/interacoes.js"></script>
 </body>
 
 </html>

@@ -8,41 +8,84 @@ html, body {
 
 header {
   background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
   position: fixed top;
   width: 100%;
   z-index: 2;
 }
-header div {
+header .conteudo_header {
   align-items: center;
   display: flex;
   height: 60px;
+  justify-content: space-between;
 }
-header img {
+header .conteudo_header div {
+  align-items: center;
+  display: flex;
+}
+header .conteudo_header div .imagem {
+  background-image: url(../../../imagens/icones/IconeBoxBank.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  height: 45px;
+  margin: 0;
   margin-left: 32px;
-  width: 35px;
+  width: 45px;
 }
-header ul {
+header .conteudo_header div ul {
   display: flex;
   margin-left: 32px;
 }
-header ul li {
-  padding: 1rem;
+header .conteudo_header div ul #hover {
+  cursor: default;
+}
+header .conteudo_header div ul li {
+  cursor: pointer;
+  padding: 16px;
   font-size: 1rem;
   font-weight: bold;
 }
-header div {
+header .conteudo_header div {
   margin-right: 2rem;
   font-size: 1rem;
   font-weight: bold;
 }
-header div p {
+header .conteudo_header div p {
   cursor: pointer;
+}
+header .conteudo_paraVoce {
+  background-color: #ffffff;
+  height: 0px;
+  position: absolute;
+  transition: 0.9s;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+header .conteudo_paraVoce .lista {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 120px 50px 120px;
+}
+header .conteudo_paraVoce .lista ul {
+  flex-direction: column;
+}
+header .conteudo_paraVoce .lista ul h3 {
+  font-size: 1.25rem;
+  padding: 16px;
+}
+header .conteudo_paraVoce .lista ul li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 16px;
+}
+header .conteudo_paraVoce .lista ul li:hover {
+  color: #C80000;
 }
 
 main {
-  background-image: url("/imagens/modelos/Foto_capa.png");
+  background-image: url("../../imagens/modelos/Foto_capa.png");
   background-position: left;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -110,7 +153,7 @@ main .conteudo_main form p {
 }
 main .conteudo_main form .btn_submit {
   background-color: #C1C1C1;
-  background-image: url(/imagens/icones/seta_cinza.svg);
+  background-image: url("../../imagens/icones/seta_cinza.svg");
   background-position: calc(100% - 16px) center;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -124,7 +167,7 @@ main .conteudo_main form .btn_submit {
 }
 main .conteudo_main form .btn_submit_vermelho {
   background-color: #C80000;
-  background-image: url(/imagens/icones/seta_branca.svg);
+  background-image: url("../../imagens/icones/seta_branca.svg");
   background-position: calc(100% - 16px) center;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -168,7 +211,7 @@ section .cards_vantagens .card div {
 section .cards_vantagens .card div i {
   margin-top: 32px;
 }
-section .cards_vantagens .card div h3 {
+section .cards_vantagens .card div h4 {
   font-size: 1.125rem;
   font-weight: bold;
   margin-top: 20px;
@@ -184,12 +227,23 @@ section .cards_vantagens .card div button {
   font-weight: bold;
   color: #C80000;
   cursor: pointer;
-  padding-bottom: 3px;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
   transition: border-bottom 0.3s ease;
 }
-section .cards_vantagens .card div button:hover {
-  border-bottom: 5px solid #C80000;
-  border-radius: 3px;
+section .cards_vantagens .card div button::after {
+  background-color: #C80000;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 0px;
+  transition: width 0.3s;
+}
+section .cards_vantagens .card div button:hover::after {
+  width: 100%;
 }
 section .grid_shopping {
   display: grid;
@@ -211,7 +265,7 @@ section .grid_shopping .left .cards_shopping {
   display: flex;
   margin-left: 55px;
 }
-section .grid_shopping .left .cards_shopping .card {
+section .grid_shopping .left .cards_shopping .card .primeiro, section .grid_shopping .left .cards_shopping .card .segundo, section .grid_shopping .left .cards_shopping .card .terceiro {
   align-items: center;
   background-color: #000000;
   color: white;
@@ -222,17 +276,32 @@ section .grid_shopping .left .cards_shopping .card {
   margin-right: 60px;
   border-radius: 5000px;
 }
-section .grid_shopping .left .cards_shopping .card:nth-child(odd) img {
-  width: 70px;
+section .grid_shopping .left .cards_shopping .card .primeiro {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px;
+  background-image: url(../../../imagens/icones/Icone_CashBack.svg);
 }
-section .grid_shopping .left .cards_shopping .card:nth-child(even) img {
-  width: 50px;
+section .grid_shopping .left .cards_shopping .card .segundo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px;
+  background-image: url(../../../imagens/icones/Icone_SmartPhone.svg);
+  background-size: 60px;
+}
+section .grid_shopping .left .cards_shopping .card .terceiro {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px;
+  background-image: url(../../../imagens/icones/Icone_Shopping.svg);
 }
 section .grid_shopping .right {
-  text-align: center;
-}
-section .grid_shopping .right img {
+  background-image: url("../../../imagens/modelos/Imagem_shopping.png");
   border-radius: 5000px;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
 }
 section .grid_shopping .parcerias_shopping {
   margin-left: 55px;
@@ -246,13 +315,54 @@ section .grid_shopping .parcerias_shopping h2 {
 section .grid_shopping .parcerias_shopping .lojas {
   display: flex;
 }
+section .grid_shopping .parcerias_shopping .lojas .loja_1 {
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  padding: 0 16px;
+  width: 140px;
+  background-image: url(../../../imagens/lojas/Magalu.png);
+}
+section .grid_shopping .parcerias_shopping .lojas .loja_2 {
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  padding: 0 16px;
+  width: 140px;
+  background-image: url(../../../imagens/lojas/CasasBahia.png);
+}
+section .grid_shopping .parcerias_shopping .lojas .loja_3 {
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  padding: 0 16px;
+  width: 140px;
+  background-image: url(../../../imagens/lojas/Centauro.png);
+  background-size: 190px;
+}
+section .grid_shopping .parcerias_shopping .lojas .loja_4 {
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  padding: 0 16px;
+  width: 140px;
+  background-image: url(../../../imagens/lojas/FastShop.png);
+}
 
 .investimentos .grid_investimentos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 0 200px 55px;
 }
-.investimentos .grid_investimentos .left img {
+.investimentos .grid_investimentos .left .imagem {
+  background-image: url(../../../imagens/icones/IconeBoxBank.png);
+  background-repeat: no-repeat;
+  background-size: 45px;
+  height: 50px;
   width: 50px;
 }
 .investimentos .grid_investimentos .left div h1 {
@@ -311,9 +421,6 @@ section .grid_shopping .parcerias_shopping .lojas {
   text-decoration: line-through;
   width: 320px;
 }
-.investimentos .grid_produtos .right .conteudo_investimento {
-  margin-bottom: 140px;
-}
 .investimentos .grid_produtos .right .conteudo_investimento h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -356,7 +463,7 @@ section .grid_shopping .parcerias_shopping .lojas {
 .investimentos .grid_abrirConta {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 0 150px 55px;
+  margin: 140px 0 150px 55px;
 }
 .investimentos .grid_abrirConta .left h2 {
   font-size: 2rem;
@@ -382,7 +489,12 @@ section .grid_shopping .parcerias_shopping .lojas {
   align-items: center;
 }
 .investimentos .grid_abrirConta .left .cards_abrirConta .seta {
+  background-image: url(../../../imagens/icones/seta_vermelha.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
   margin: 85px 64px 0 64px;
+  width: 140px;
 }
 .investimentos .grid_abrirConta .left .cards_abrirConta .card {
   align-items: center;
@@ -394,14 +506,27 @@ section .grid_shopping .parcerias_shopping .lojas {
   width: 140px;
   margin-top: 85px;
 }
-.investimentos .grid_abrirConta .left .cards_abrirConta .card img {
-  width: 70px;
+.investimentos .grid_abrirConta .left .cards_abrirConta .primeiro {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  width: 140px;
+  background-image: url(../../../imagens/icones/icone_dinheiro.svg);
+}
+.investimentos .grid_abrirConta .left .cards_abrirConta .segundo {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  width: 140px;
+  background-image: url(../../../imagens/icones/Icone_saco_dinheiro.svg);
 }
 .investimentos .grid_abrirConta .right {
-  text-align: center;
-}
-.investimentos .grid_abrirConta .right img {
+  background-image: url(../../../imagens/modelos/Imagem_Investimento.png);
   border-radius: 5000px;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
 }
 
 footer {
@@ -440,6 +565,12 @@ footer .left .cards_footer i {
 }
 footer .left .cards_footer div p {
   font-size: 1.5rem;
+}
+footer .left .imagem {
+  background-image: url(../../../imagens/icones/IconeBoxBank.png);
+  height: 60px;
+  margin: 0 auto;
+  width: 55px;
 }
 footer .center {
   margin-left: 100px;
