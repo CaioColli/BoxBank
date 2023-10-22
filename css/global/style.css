@@ -405,8 +405,62 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   display: none;
   margin-top: 10px;
 }
-.investimentos .grid_investimentos .right {
-  text-align: center;
+.investimentos .grid_investimentos .right .celular {
+  border-radius: 32px;
+  border: 8px solid #000000;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 330px;
+}
+.investimentos .grid_investimentos .right .celular #inicial #inicial {
+  position: relative;
+}
+.investimentos .grid_investimentos .right .celular #inicial #inicial h1, .investimentos .grid_investimentos .right .celular #inicial #inicial h2, .investimentos .grid_investimentos .right .celular #inicial #inicial p, .investimentos .grid_investimentos .right .celular #inicial #inicial button {
+  position: absolute;
+}
+@keyframes animaTitulos {}
+@keyframes animaBtn_P {}
+.investimentos .grid_investimentos .right .celular::before {
+  background-color: #000000;
+  border-radius: 0 0 30px 30px;
+  content: "";
+  height: 14px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 60px;
+}
+.investimentos .grid_investimentos .right .celular div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.investimentos .grid_investimentos .right .celular div h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 280px;
+}
+.investimentos .grid_investimentos .right .celular div h2 {
+  font-size: 1.5rem;
+  width: 280px;
+  padding: 16px 0;
+}
+.investimentos .grid_investimentos .right .celular div p {
+  font-size: 1rem;
+}
+.investimentos .grid_investimentos .right .celular div button {
+  background-color: #C80000;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 16px;
+  width: 150px;
 }
 .investimentos .grid_produtos {
   display: grid;

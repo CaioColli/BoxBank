@@ -63,7 +63,94 @@
             }
         }
         .right {
-            text-align: center;
+            .celular {
+                border-radius: 32px;
+                border: 8px solid $cor_preto;
+                height: 600px;
+                margin: 0 auto;
+                overflow: hidden;
+                position: relative;
+                width: 330px;
+
+                #inicial {
+                    #inicial {
+                        position: relative;
+                    }
+                    
+                    #inicial h1, #inicial h2,  #inicial p, #inicial button {
+                        position: absolute;
+                    }
+
+                    h1 {
+                        
+                    }
+                    
+                    @keyframes animaTitulos {
+                        100% {
+
+                        }
+
+                        0% {
+
+                        }
+                    }
+
+                    @keyframes animaBtn_P {
+                        100% {
+
+                        }
+
+                        0% {
+
+                        }
+                    }
+                }
+
+                    &::before {
+                        background-color: $cor_preto;
+                        border-radius: 0 0 30px 30px;
+                        content: '';
+                        height: 14px;
+                        left: 0;
+                        margin: 0 auto;
+                        position: absolute;
+                        right: 0;
+                        width: 60px;
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        flex-direction: column;
+                        
+                        h1 {
+                            @include fonte_Peso_32px;
+                            width: 280px;
+                        }
+                        
+                        h2 {
+                            @include fonte_24px;
+                            width: 280px;
+                            padding: 16px 0
+                        }
+                        
+                        p {
+                            @include fonte_16px;
+                        }
+                        
+                        button {
+                            background-color: $background_vermelho;
+                            border-radius: 50px;
+                            color: $cor_texto_branca;
+                            cursor: pointer;
+                            height: 40px;
+                            margin-top: 16px;
+                            width: 150px;
+                        }
+                    }
+            }
         }
     }
     
