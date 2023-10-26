@@ -18,7 +18,7 @@ header {
             display: flex;
 
             .imagem {
-                background-image: url(../../../imagens/icones/IconeBoxBank.png);
+                background-image: url(../../imagens/icones/IconeBoxBank.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 35px;
@@ -57,11 +57,11 @@ header {
     .conteudo_paraVoce {
         background-color: $background_branco;
         height: 0px;
+        overflow: hidden;
         position: absolute;
         transition: 0.9s;
         width: 100%;
         z-index: 0;
-        overflow: hidden;
 
         .lista {
             display: flex;

@@ -23,7 +23,7 @@ header .conteudo_header div {
   display: flex;
 }
 header .conteudo_header div .imagem {
-  background-image: url(../../../imagens/icones/IconeBoxBank.png);
+  background-image: url(../../imagens/icones/IconeBoxBank.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35px;
@@ -56,11 +56,11 @@ header .conteudo_header div p {
 header .conteudo_paraVoce {
   background-color: #ffffff;
   height: 0px;
+  overflow: hidden;
   position: absolute;
   transition: 0.9s;
   width: 100%;
   z-index: 0;
-  overflow: hidden;
 }
 header .conteudo_paraVoce .lista {
   display: flex;
@@ -280,23 +280,23 @@ section .grid_shopping .left .cards_shopping .card .primeiro {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80px;
-  background-image: url(../../../imagens/icones/Icone_CashBack.svg);
+  background-image: url(../../imagens/icones/Icone_CashBack.svg);
 }
 section .grid_shopping .left .cards_shopping .card .segundo {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80px;
-  background-image: url(../../../imagens/icones/Icone_SmartPhone.svg);
+  background-image: url(../../imagens/icones/Icone_SmartPhone.svg);
   background-size: 60px;
 }
 section .grid_shopping .left .cards_shopping .card .terceiro {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80px;
-  background-image: url(../../../imagens/icones/Icone_Shopping.svg);
+  background-image: url(../../imagens/icones/Icone_Shopping.svg);
 }
 section .grid_shopping .right {
-  background-image: url("../../../imagens/modelos/Imagem_shopping.png");
+  background-image: url(../../imagens/modelos/Imagem_shopping.png);
   border-radius: 5000px;
   height: 500px;
   margin: 0 auto;
@@ -322,7 +322,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_1 {
   height: 140px;
   padding: 0 16px;
   width: 140px;
-  background-image: url(../../../imagens/lojas/Magalu.png);
+  background-image: url(../../imagens/lojas/Magalu.png);
 }
 section .grid_shopping .parcerias_shopping .lojas .loja_2 {
   background-position: center;
@@ -331,7 +331,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_2 {
   height: 140px;
   padding: 0 16px;
   width: 140px;
-  background-image: url(../../../imagens/lojas/CasasBahia.png);
+  background-image: url(../../imagens/lojas/CasasBahia.png);
 }
 section .grid_shopping .parcerias_shopping .lojas .loja_3 {
   background-position: center;
@@ -340,7 +340,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_3 {
   height: 140px;
   padding: 0 16px;
   width: 140px;
-  background-image: url(../../../imagens/lojas/Centauro.png);
+  background-image: url(../../imagens/lojas/Centauro.png);
   background-size: 190px;
 }
 section .grid_shopping .parcerias_shopping .lojas .loja_4 {
@@ -350,7 +350,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   height: 140px;
   padding: 0 16px;
   width: 140px;
-  background-image: url(../../../imagens/lojas/FastShop.png);
+  background-image: url(../../imagens/lojas/FastShop.png);
 }
 
 .investimentos .grid_investimentos {
@@ -359,7 +359,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   margin: 0 0 200px 55px;
 }
 .investimentos .grid_investimentos .left .imagem {
-  background-image: url(../../../imagens/icones/IconeBoxBank.png);
+  background-image: url(../../imagens/icones/IconeBoxBank.png);
   background-repeat: no-repeat;
   background-size: 45px;
   height: 50px;
@@ -414,14 +414,9 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   position: relative;
   width: 330px;
 }
-.investimentos .grid_investimentos .right .celular #inicial #inicial {
-  position: relative;
+.investimentos .grid_investimentos .right .celular * {
+  cursor: url("../../imagens/cursor/cursor.png"), default;
 }
-.investimentos .grid_investimentos .right .celular #inicial #inicial h1, .investimentos .grid_investimentos .right .celular #inicial #inicial h2, .investimentos .grid_investimentos .right .celular #inicial #inicial p, .investimentos .grid_investimentos .right .celular #inicial #inicial button {
-  position: absolute;
-}
-@keyframes animaTitulos {}
-@keyframes animaBtn_P {}
 .investimentos .grid_investimentos .right .celular::before {
   background-color: #000000;
   border-radius: 0 0 30px 30px;
@@ -432,35 +427,214 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   position: absolute;
   right: 0;
   width: 60px;
+  z-index: 5;
 }
-.investimentos .grid_investimentos .right .celular div {
-  display: flex;
+.investimentos .grid_investimentos .right .celular .inicial {
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  display: flex;
   flex-direction: column;
+  height: 100%;
+  margin-top: 200px;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 200px auto;
 }
-.investimentos .grid_investimentos .right .celular div h1 {
+.investimentos .grid_investimentos .right .celular .inicial #inicial h1,
+.investimentos .grid_investimentos .right .celular .inicial #inicial h2,
+.investimentos .grid_investimentos .right .celular .inicial #inicial p,
+.investimentos .grid_investimentos .right .celular .inicial #inicial button {
+  position: absolute;
+}
+.investimentos .grid_investimentos .right .celular .inicial h1 {
   font-size: 2rem;
   font-weight: bold;
+  margin: 0;
   width: 280px;
 }
-.investimentos .grid_investimentos .right .celular div h2 {
+.investimentos .grid_investimentos .right .celular .inicial h2 {
   font-size: 1.5rem;
   width: 280px;
   padding: 16px 0;
 }
-.investimentos .grid_investimentos .right .celular div p {
+.investimentos .grid_investimentos .right .celular .inicial p {
   font-size: 1rem;
 }
-.investimentos .grid_investimentos .right .celular div button {
+.investimentos .grid_investimentos .right .celular .inicial button {
   background-color: #C80000;
   border-radius: 50px;
   color: white;
-  cursor: pointer;
   height: 40px;
   margin-top: 16px;
   width: 150px;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.investimentos .grid_investimentos .right .celular .inicial .inicial_oculto {
+  animation: fadeOut 1s;
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento {
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  position: relative;
+  text-align: center;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento header i {
+  padding: 16px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main {
+  background: transparent;
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main div {
+  align-items: center;
+  display: flex;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main div p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2E5E56;
+  margin-left: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main button {
+  background-color: #C80000;
+  border-radius: 50px;
+  color: white;
+  height: 35px;
+  width: 90px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h1,
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h2,
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main div {
+  margin: 16px 0;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section {
+  padding: 8px;
+  margin-top: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div {
+  align-items: center;
+  display: flex;
+  padding: 16px 0;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div p:nth-child(1) {
+  padding-right: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div i {
+  padding-right: 4px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo {
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 50px;
+  display: flex;
+  height: 20px;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin: 16px auto;
+  width: 300px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo div {
+  margin: 0 16px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo div p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 4px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo .nbr_processos {
+  background-color: #C80000;
+  border-radius: 500px;
+  height: 5px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo .nbr_processos #nbr {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer {
+  background-color: #F0F0F0;
+  height: 200px;
+  padding: 0;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div {
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ACACAC;
+  margin-top: 6px;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div p {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div div {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div div p {
+  margin: 0;
+  padding: 0 8px;
+  color: #000000;
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div div span {
+  color: #2E5E56;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.investimentos .grid_investimentos .right .celular #tela_investimento .investimento_oculto {
+  animation: fadeOut 1s;
+  display: none;
 }
 .investimentos .grid_produtos {
   display: grid;
@@ -517,7 +691,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
 .investimentos .grid_abrirConta {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 140px 0 150px 55px;
+  margin: 0 0 150px 55px;
 }
 .investimentos .grid_abrirConta .left h2 {
   font-size: 2rem;
@@ -543,7 +717,7 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   align-items: center;
 }
 .investimentos .grid_abrirConta .left .cards_abrirConta .seta {
-  background-image: url(../../../imagens/icones/seta_vermelha.svg);
+  background-image: url(../../imagens/icones/seta_vermelha.svg);
   background-position: center;
   background-repeat: no-repeat;
   height: 140px;
@@ -565,17 +739,17 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   background-repeat: no-repeat;
   height: 140px;
   width: 140px;
-  background-image: url(../../../imagens/icones/icone_dinheiro.svg);
+  background-image: url(../../imagens/icones/icone_dinheiro.svg);
 }
 .investimentos .grid_abrirConta .left .cards_abrirConta .segundo {
   background-position: center;
   background-repeat: no-repeat;
   height: 140px;
   width: 140px;
-  background-image: url(../../../imagens/icones/Icone_saco_dinheiro.svg);
+  background-image: url(../../imagens/icones/Icone_saco_dinheiro.svg);
 }
 .investimentos .grid_abrirConta .right {
-  background-image: url(../../../imagens/modelos/Imagem_Investimento.png);
+  background-image: url(../../imagens/modelos/Imagem_Investimento.png);
   border-radius: 5000px;
   height: 500px;
   margin: 0 auto;
@@ -621,7 +795,7 @@ footer .left .cards_footer div p {
   font-size: 1.5rem;
 }
 footer .left .imagem {
-  background-image: url(../../../imagens/icones/IconeBoxBank.png);
+  background-image: url(../../imagens/icones/IconeBoxBank.png);
   height: 60px;
   margin: 0 auto;
   width: 55px;

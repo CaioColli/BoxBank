@@ -118,25 +118,25 @@ section {
 
                     .primeiro {
                         @include formatacao;
-                        background-image: url(../../../imagens/icones/Icone_CashBack.svg);
+                        background-image: url(../../imagens/icones/Icone_CashBack.svg);
                     }
 
                     .segundo {
                         @include formatacao;
-                        background-image: url(../../../imagens/icones/Icone_SmartPhone.svg);
+                        background-image: url(../../imagens/icones/Icone_SmartPhone.svg);
                         background-size: 60px
                     }
 
                     .terceiro {
                         @include formatacao;
-                        background-image: url(../../../imagens/icones/Icone_Shopping.svg);
+                        background-image: url(../../imagens/icones/Icone_Shopping.svg);
                     }
                 }
             }
         }
 
         .right {
-            background-image: url('../../../imagens/modelos/Imagem_shopping.png');
+            background-image: url(../../imagens/modelos/Imagem_shopping.png);
             border-radius: 5000px;
             height: 500px;
             margin: 0 auto;
@@ -167,23 +167,23 @@ section {
                 
                 .loja_1 {
                     @include formatacaoLojas;
-                    background-image: url(../../../imagens/lojas/Magalu.png);
+                    background-image: url(../../imagens/lojas/Magalu.png);
                 }
 
                 .loja_2 {
                     @include formatacaoLojas;
-                    background-image: url(../../../imagens/lojas/CasasBahia.png);
+                    background-image: url(../../imagens/lojas/CasasBahia.png);
                 }
 
                 .loja_3 {
                     @include formatacaoLojas;
-                    background-image: url(../../../imagens/lojas/Centauro.png);
+                    background-image: url(../../imagens/lojas/Centauro.png);
                     background-size: 190px;
                 }
 
                 .loja_4 {
                     @include formatacaoLojas;
-                    background-image: url(../../../imagens/lojas/FastShop.png);
+                    background-image: url(../../imagens/lojas/FastShop.png);
                 } 
             }
         }

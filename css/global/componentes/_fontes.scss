@@ -2,6 +2,11 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
+@mixin micro_fonte_Peso {
+    font-size: .75rem;
+    font-weight: bold;
+}
+
 @mixin micro_fonte {
     font-size: .75rem;
 }
@@ -17,6 +22,11 @@ html, body {
 
 @mixin fonte_Peso_18px {
     font-size: 1.125rem;
+    font-weight: bold;
+}
+
+@mixin fonte_Peso_20px {
+    font-size: 1.25rem;
     font-weight: bold;
 }
 

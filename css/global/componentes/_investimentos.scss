@@ -3,9 +3,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 0 0 200px 55px;
+
         .left {
             .imagem {
-                background-image: url(../../../imagens/icones/IconeBoxBank.png);
+                background-image: url(../../imagens/icones/IconeBoxBank.png);
                 background-repeat: no-repeat;
                 background-size: 45px;
                 height: 50px;
@@ -45,15 +46,18 @@
 
                             &:hover {
                                 color: $cor_texto_preto;
+
                                 i {
                                     display: block;
                                 }
-                                + span {
+
+                                +span {
                                     display: block
                                 }
                             }
                         }
                     }
+
                     span {
                         @include fonte_24px;
                         display: none;
@@ -62,8 +66,14 @@
                 }
             }
         }
+
         .right {
             .celular {
+
+                * {
+                    cursor: url('../../imagens/cursor/cursor.png'), default;
+                }
+
                 border-radius: 32px;
                 border: 8px solid $cor_preto;
                 height: 600px;
@@ -72,92 +82,271 @@
                 position: relative;
                 width: 330px;
 
-                #inicial {
-                    #inicial {
-                        position: relative;
-                    }
-                    
-                    #inicial h1, #inicial h2,  #inicial p, #inicial button {
+                &::before {
+                    background-color: $cor_preto;
+                    border-radius: 0 0 30px 30px;
+                    content: '';
+                    height: 14px;
+                    left: 0;
+                    margin: 0 auto;
+                    position: absolute;
+                    right: 0;
+                    width: 60px;
+                    z-index: 5;
+                }
+
+                .inicial {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    margin-top: 200px;
+                    opacity: 1;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    margin: 200px auto;
+
+                    #inicial h1,
+                    #inicial h2,
+                    #inicial p,
+                    #inicial button {
                         position: absolute;
                     }
 
                     h1 {
-                        
-                    }
-                    
-                    @keyframes animaTitulos {
-                        100% {
-
-                        }
-
-                        0% {
-
-                        }
+                        @include fonte_Peso_32px;
+                        margin: 0;
+                        width: 280px;
                     }
 
-                    @keyframes animaBtn_P {
-                        100% {
+                    h2 {
+                        @include fonte_24px;
+                        width: 280px;
+                        padding: 16px 0
+                    }
 
+                    p {
+                        @include fonte_16px;
+                    }
+
+                    button {
+                        background-color: $background_vermelho;
+                        border-radius: 50px;
+                        color: $cor_texto_branca;
+                        height: 40px;
+                        margin-top: 16px;
+                        width: 150px;
+                    }
+
+                    @keyframes fadeOut {
+                        from {
+                            opacity: 1;
+                            display: block;
                         }
 
-                        0% {
-
+                        to {
+                            opacity: 0;
+                            display: none;
                         }
+                    }
+
+                    .inicial_oculto {
+                        animation: fadeOut 1s;
+                        display: none;
                     }
                 }
 
-                    &::before {
-                        background-color: $cor_preto;
-                        border-radius: 0 0 30px 30px;
-                        content: '';
-                        height: 14px;
-                        left: 0;
-                        margin: 0 auto;
-                        position: absolute;
-                        right: 0;
-                        width: 60px;
+                #tela_investimento {
+                    display: none;
+
+                    .conteudo_investimento {
+                        header {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 8px 0;
+                            position: relative;
+                            text-align: center;
+
+                            i {
+                                padding: 16px;
+                            }
+                        }
+
+                        main {
+                            background: transparent;
+                            padding: 8px;
+
+                            h1 {
+                                @include fonte_Peso_24px;
+                                margin: 0
+                            }
+
+                            h2 {
+                                @include fonte_Peso_20px;
+                            }
+
+                            div {
+                                align-items: center;
+                                display: flex;
+
+                                p {
+                                    @include fonte_Peso_16px;
+                                    color: $cor_texto_verde;
+                                    margin-left: 8px;
+                                }
+                            }
+
+                            button {
+                                background-color: $background_vermelho;
+                                border-radius: 50px;
+                                color: $cor_texto_branca;
+                                height: 35px;
+                                width: 90px;
+                            }
+
+                            h1,
+                            h2,
+                            div {
+                                margin: 16px 0;
+                            }
+                        }
+
+                        section {
+                            padding: 8px;
+                            margin-top: 8px;
+
+                            h2 {
+                                @include fonte_Peso_20px;
+                            }
+
+                            div {
+                                align-items: center;
+                                display: flex;
+                                padding: 16px 0;
+
+                                p:nth-child(1) {
+                                    padding-right: 8px;
+                                }
+
+                                p {
+                                    @include fonte_Peso_16px;
+                                }
+
+                                i {
+                                    padding-right: 4px;
+                                }
+                            }
+
+                            .processo {
+                                align-items: center;
+                                background-color: $background_cinzaClaro;
+                                border-radius: 50px;
+                                display: flex;
+                                height: 20px;
+                                justify-content: space-between;
+                                margin-top: 32px;
+                                margin: 16px auto;
+                                width: 300px;
+
+                                div {
+                                    margin: 0 16px;
+
+                                    p {
+                                        @include fonte_Peso_16px;
+                                        margin-left: 4px;
+                                    }
+                                }
+
+                                .nbr_processos {
+                                    background-color: $background_vermelho;
+                                    border-radius: 500px;
+                                    height: 5px;
+
+                                    #nbr {
+                                        @include fonte_Peso_16px;
+                                        color: $cor_texto_branca;
+                                    }
+                                }
+                            }
+                        }
+
+                        footer {
+                            background-color: $background_cinzaClaro;
+                            height: 200px;
+                            padding: 0;
+
+                            div {
+                                padding: 8px;
+
+                                h2 {
+                                    @include fonte_Peso_20px;
+                                    color: $cor_texto_preto;
+                                }
+
+                                p {
+                                    @include fonte_Peso_16px;
+                                    color: $cor_texto_cinza;
+                                    margin-top: 6px;
+                                }
+
+                                div {
+                                    p {
+                                        @include micro_fonte_Peso;
+                                    }
+
+                                    div {
+                                        margin-top: 8px;
+                                        display: flex;
+                                        align-items: center;
+                                        @include micro_fonte_Peso;
+
+                                        p {
+                                            margin: 0;
+                                            padding: 0 8px;
+                                            color: $cor_texto_preto;
+                                        }
+
+                                        span {
+                                            color: $cor_texto_verde;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
 
-                    div {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        height: 100%;
-                        flex-direction: column;
-                        
-                        h1 {
-                            @include fonte_Peso_32px;
-                            width: 280px;
+                    @keyframes fadeOut {
+                        from {
+                          opacity: 1;
+                          display: block;
                         }
-                        
-                        h2 {
-                            @include fonte_24px;
-                            width: 280px;
-                            padding: 16px 0
+                        to {
+                          opacity: 0;
+                          display: none;
                         }
-                        
-                        p {
-                            @include fonte_16px;
-                        }
-                        
-                        button {
-                            background-color: $background_vermelho;
-                            border-radius: 50px;
-                            color: $cor_texto_branca;
-                            cursor: pointer;
-                            height: 40px;
-                            margin-top: 16px;
-                            width: 150px;
-                        }
-                    }
+                      }
+                      
+                      .investimento_oculto {
+                        animation: fadeOut 1s;
+                        display: none;
+                      }
+                      
+                }
+
+                // #investimentos_aparente {
+
+                // }
             }
         }
     }
-    
+
     .grid_produtos {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 0 0 200px 55px;
+
         .left {
             h1 {
                 @include fonte_Peso_48px;
@@ -165,48 +354,53 @@
                 margin-bottom: 140px;
                 text-decoration: line-through;
                 width: 320px;
-            } 
+            }
         }
+
         .right {
             .conteudo_investimento {
                 h1 {
                     @include fonte_Peso_48px;
                 }
+
                 p {
                     @include fonte_24px;
                     padding: 32px 0;
                     width: 660px;
-                } 
-                
+                }
+
                 ul {
                     div {
                         div {
                             padding: 16px 0;
-    
+
                             li {
                                 @include fonte_Peso_48px;
                                 align-items: center;
                                 color: $cor_texto_cinzaClaro;
                                 cursor: default;
                                 display: flex;
-    
+
                                 i {
                                     display: none;
                                     font-size: 16px;
                                     margin-right: 8px
                                 }
-    
+
                                 &:hover {
                                     color: $cor_texto_preto;
+
                                     i {
                                         display: block;
                                     }
-                                    + span {
+
+                                    +span {
                                         display: block
                                     }
                                 }
                             }
                         }
+
                         span {
                             @include fonte_24px;
                             display: none;
@@ -217,47 +411,54 @@
             }
         }
     }
-    
+
     .grid_abrirConta {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 140px 0 150px 55px;
+        margin: 0 0 150px 55px;
+
         .left {
             h2 {
                 @include fonte_Peso_32px;
                 margin-bottom: 50px;
                 width: 280px;
             }
+
             ul {
 
                 li:first-child {
                     &:hover {
                         color: $cor_texto_vermelho;
                     }
-                  }
+                }
 
                 li {
                     @include fonte_24px;
                     padding: 16px 0;
+
                     a {
-                        cursor: pointer; 
+                        cursor: pointer;
                     }
+
                     span {
                         color: $cor_texto_vermelho;
                     }
                 }
             }
+
             .cards_abrirConta {
                 display: flex;
                 align-items: center;
+
                 .seta {
-                    background-image: url(../../../imagens/icones/seta_vermelha.svg);
+                    background-image: url(../../imagens/icones/seta_vermelha.svg);
                     background-position: center;
                     background-repeat: no-repeat;
                     height: 140px;
                     margin: 85px 64px 0 64px;
                     width: 140px;
                 }
+
                 .card {
                     align-items: center;
                     background-color: $background_preto;
@@ -278,17 +479,18 @@
 
                 .primeiro {
                     @include formatacao;
-                    background-image: url(../../../imagens/icones/icone_dinheiro.svg);
+                    background-image: url(../../imagens/icones/icone_dinheiro.svg);
                 }
 
                 .segundo {
                     @include formatacao;
-                    background-image: url(../../../imagens/icones/Icone_saco_dinheiro.svg);
+                    background-image: url(../../imagens/icones/Icone_saco_dinheiro.svg);
                 }
             }
         }
+
         .right {
-            background-image: url(../../../imagens/modelos/Imagem_Investimento.png);
+            background-image: url(../../imagens/modelos/Imagem_Investimento.png);
             border-radius: 5000px;
             height: 500px;
             margin: 0 auto;

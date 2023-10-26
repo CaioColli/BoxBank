@@ -21,9 +21,42 @@ conteudoParaVoce.addEventListener('mouseleave', () => {
 
 // Funções celular
 
-const telaInicial = document.querySelector('#inicial')
+const telaInicial = document.querySelector('.inicial')
+const elementosTelaInicial = telaInicial.querySelectorAll('h1, h2, p, button')
 const botaoTelaInicial = document.querySelector('#btn_inicial')
 
+const telaInvestimeto = document.querySelector('#tela_investimento')
+const elementosInvestimento = telaInvestimeto.querySelector('.conteudo_investimento')
+const botaoVoltar = document.querySelector('#btn_voltar')
+
+
 botaoTelaInicial.addEventListener('click', () => {
-  telaInicial.style.display = 'none'
+  elementosTelaInicial.forEach(elementos => {
+    elementos.classList.add('inicial_oculto')
+  })
+  setTimeout(function() {
+    telaInvestimeto.style.display = 'block'
+  }, 800)
 })
+
+botaoVoltar.addEventListener('click', () => {
+
+  elementosInvestimento.classList.add('investimento_oculto')
+
+  setTimeout(function() {
+    elementosTelaInicial.forEach(elemento => {
+      elemento.classList.remove('inicial_oculto')
+      telaInvestimeto.style.display = 'none'
+      elementosInvestimento.classList.remove('investimento_oculto')
+    })
+  }, 1000)
+
+  setTimeout(function() {
+    telaInvestimeto.style.display = 'block'
+  }, 800)
+})
+
+
+
+
+
