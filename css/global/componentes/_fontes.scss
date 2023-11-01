@@ -1,14 +1,23 @@
 html, body {
     font-family: Arial, sans-serif;
 }
-
+// Mudar nome de micro_fonte para fonte_Peso_12px 
 @mixin micro_fonte_Peso {
     font-size: .75rem;
     font-weight: bold;
 }
-
+// Mudar nome de micro_fonte para fonte_12px 
 @mixin micro_fonte {
     font-size: .75rem;
+}
+
+@mixin fonte_Peso_14px {
+    font-size: .875rem;
+    font-weight: bold; 
+}
+
+@mixin fonte_14px {
+    font-size: .875rem;
 }
 
 @mixin fonte_Peso_16px {

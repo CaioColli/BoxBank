@@ -406,6 +406,9 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   margin-top: 10px;
 }
 .investimentos .grid_investimentos .right .celular {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   border-radius: 32px;
   border: 8px solid #000000;
   height: 600px;
@@ -429,39 +432,42 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   width: 60px;
   z-index: 5;
 }
-.investimentos .grid_investimentos .right .celular .inicial {
+.investimentos .grid_investimentos .right .celular #inicial {
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
+  left: 0;
   margin-top: 200px;
+  margin: 200px auto;
   opacity: 1;
   position: absolute;
   right: 0;
-  left: 0;
-  margin: 200px auto;
 }
-.investimentos .grid_investimentos .right .celular .inicial #inicial h1,
-.investimentos .grid_investimentos .right .celular .inicial #inicial h2,
-.investimentos .grid_investimentos .right .celular .inicial #inicial p,
-.investimentos .grid_investimentos .right .celular .inicial #inicial button {
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial .conteudo_inicial h1,
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial .conteudo_inicial h2,
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial .conteudo_inicial p,
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial .conteudo_inicial button {
   position: absolute;
 }
-.investimentos .grid_investimentos .right .celular .inicial h1 {
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial h1 {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
   width: 280px;
 }
-.investimentos .grid_investimentos .right .celular .inicial h2 {
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial h2 {
   font-size: 1.5rem;
   width: 280px;
   padding: 16px 0;
 }
-.investimentos .grid_investimentos .right .celular .inicial p {
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial p {
   font-size: 1rem;
 }
-.investimentos .grid_investimentos .right .celular .inicial button {
+.investimentos .grid_investimentos .right .celular #inicial .conteudo_inicial button {
   background-color: #C80000;
   border-radius: 50px;
   color: white;
@@ -469,24 +475,24 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   margin-top: 16px;
   width: 150px;
 }
-@keyframes fadeOut {
+@keyframes fadeOut_flex {
   from {
     opacity: 1;
-    display: block;
+    display: flex;
   }
   to {
     opacity: 0;
     display: none;
   }
 }
-.investimentos .grid_investimentos .right .celular .inicial .inicial_oculto {
-  animation: fadeOut 1s;
+.investimentos .grid_investimentos .right .celular #inicial .inicial_oculto {
+  animation: fadeOut_flex 1s;
   display: none;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento {
+.investimentos .grid_investimentos .right .celular #carteira_digital {
   display: none;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento header {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira header {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -494,68 +500,90 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   position: relative;
   text-align: center;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento header i {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira header i {
   padding: 16px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main {
   background: transparent;
   padding: 8px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h1 {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 0;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h2 {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main h2 {
   font-size: 1.25rem;
   font-weight: bold;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main div {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main div {
   align-items: center;
   display: flex;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main div p {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main div p {
   font-size: 1rem;
   font-weight: bold;
   color: #2E5E56;
   margin-left: 8px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main button {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main button {
+  font-size: 1rem;
   background-color: #C80000;
   border-radius: 50px;
   color: white;
   height: 35px;
   width: 90px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h1,
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main h2,
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento main div {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main h1,
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main h2,
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main div {
   margin: 16px 0;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira main .balao_investir {
+  background-color: #C80000;
+  -webkit-clip-path: polygon(40% 30%, 40% 50%, 100% 50%, 100% 80%, 40% 80%, 40% 100%, 0 63%);
+          clip-path: polygon(40% 30%, 40% 50%, 100% 50%, 100% 80%, 40% 80%, 40% 100%, 0 63%);
+  height: 30px;
+  position: absolute;
+  top: 162px;
+  left: 110px;
+  width: 40px;
+  animation: anima_balao 0.8s alternate infinite;
+}
+@keyframes anima_balao {
+  0% {
+    left: 100px;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 110px;
+  }
+}
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section {
   padding: 8px;
   margin-top: 8px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section h2 {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section h2 {
   font-size: 1.25rem;
   font-weight: bold;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section div {
   align-items: center;
   display: flex;
   padding: 16px 0;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div p:nth-child(1) {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section div p:nth-child(1) {
   padding-right: 8px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div p {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section div p {
   font-size: 1rem;
   font-weight: bold;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section div i {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section div i {
   padding-right: 4px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section .processo {
   align-items: center;
   background-color: #F0F0F0;
   border-radius: 50px;
@@ -566,63 +594,63 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
   margin: 16px auto;
   width: 300px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo div {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section .processo div {
   margin: 0 16px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo div p {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section .processo div p {
   font-size: 1rem;
   font-weight: bold;
   margin-left: 4px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo .nbr_processos {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section .processo .nbr_processos {
   background-color: #C80000;
   border-radius: 500px;
   height: 5px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento section .processo .nbr_processos #nbr {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira section .processo .nbr_processos #nbr {
   font-size: 1rem;
   font-weight: bold;
   color: white;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer {
   background-color: #F0F0F0;
   height: 200px;
   padding: 0;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div {
   padding: 8px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div h2 {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div h2 {
   font-size: 1.25rem;
   font-weight: bold;
   color: #000000;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div p {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div p {
   font-size: 1rem;
   font-weight: bold;
   color: #ACACAC;
   margin-top: 6px;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div p {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div div p {
   font-size: 0.75rem;
   font-weight: bold;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div div {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div div div {
   margin-top: 8px;
   display: flex;
   align-items: center;
   font-size: 0.75rem;
   font-weight: bold;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div div p {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div div div p {
   margin: 0;
   padding: 0 8px;
   color: #000000;
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .conteudo_investimento footer div div div span {
+.investimentos .grid_investimentos .right .celular #carteira_digital .conteudo_carteira footer div div div span {
   color: #2E5E56;
 }
-@keyframes fadeOut {
+@keyframes fadeOut_block {
   from {
     opacity: 1;
     display: block;
@@ -632,8 +660,373 @@ section .grid_shopping .parcerias_shopping .lojas .loja_4 {
     display: none;
   }
 }
-.investimentos .grid_investimentos .right .celular #tela_investimento .investimento_oculto {
-  animation: fadeOut 1s;
+.investimentos .grid_investimentos .right .celular #carteira_digital .carteira_oculto {
+  animation: fadeOut_block 1s;
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos {
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  position: relative;
+  text-align: center;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos header i {
+  padding: 16px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main {
+  background: transparent;
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main button {
+  font-size: 0.875rem;
+  background-color: #C80000;
+  border-radius: 50px;
+  color: white;
+  height: 40px;
+  width: 300px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main div {
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  width: 300px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main div div {
+  align-items: baseline;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main div div p {
+  padding: 6px 0;
+  font-size: 1rem;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main div div span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main div i {
+  margin-right: 10px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main h1,
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main button,
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos main div {
+  margin: 8px 0;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section {
+  padding-left: 8px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+@keyframes border-animation {
+  0% {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    height: 50%;
+    opacity: 1;
+    width: 50%;
+  }
+  100% {
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+  }
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas {
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  margin: 16px 0;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas:nth-child(2)::before, .investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas:nth-child(2)::after {
+  animation: border-animation 3s linear infinite;
+  border: 2px solid #C80000;
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas:nth-child(2)::before {
+  border-bottom: none;
+  border-left: none;
+  right: 0;
+  top: 0;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas:nth-child(2)::after {
+  border-right: none;
+  border-top: none;
+  bottom: 0;
+  left: 0;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas .icone_cdb {
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 16px;
+  width: 40px;
+  background-image: url(../../imagens/icones/icone_grafico_um.svg);
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas .icone_fundos {
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 16px;
+  width: 40px;
+  background-image: url(../../imagens/icones/icone_grafico_dois.svg);
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas .icone_poupanca {
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  height: 40px;
+  padding: 0 16px;
+  width: 40px;
+  background-image: url(../../imagens/icones/icone_moedas.svg);
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas div {
+  align-items: baseline;
+  flex-direction: column;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas div h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas div p {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas div h2,
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .conteudo_investimentos section div .card_escolhas div p {
+  width: 244px;
+}
+.investimentos .grid_investimentos .right .celular #escolhas_investimentos .investimentos_oculto {
+  animation: fadeOut_block 1s;
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb {
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb {
+  height: 600px;
+  overflow: scroll;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  position: relative;
+  text-align: center;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb header i {
+  padding: 16px;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main {
+  background: transparent;
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main div {
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  margin-top: 16px;
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main div h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main div div {
+  font-size: 0.875rem;
+  border-bottom: 1px solid #C1C1C1;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main div .botoes {
+  border: none;
+  justify-content: center;
+  margin: 16px 0;
+  padding: 0;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb main div .botoes button {
+  font-size: 1rem;
+  background-color: #C80000;
+  border-radius: 50px;
+  color: white;
+  height: 35px;
+  margin: 0 16px;
+  width: 90px;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .conteudo_tipos_cdb::-webkit-scrollbar {
+  width: 4px;
+}
+.investimentos .grid_investimentos .right .celular #tipos_cdb .cdb_oculto {
+  animation: fadeOut_block 1s;
+  display: none;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  position: relative;
+  text-align: center;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade header i {
+  padding: 16px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main {
+  background: transparent;
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs {
+  border-bottom: 1px solid #C1C1C1;
+  margin-top: 32px;
+  width: 280px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs p {
+  font-size: 0.875rem;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs div {
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs div span {
+  padding: 0 4px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs div input {
+  padding: 8px 0;
+  width: 280px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs div input::-moz-placeholder {
+  color: #000000;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .inputs div input::placeholder {
+  color: #000000;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main form .btn_aplicar_cdb {
+  font-size: 0.875rem;
+  background-color: #C80000;
+  border-radius: 50px;
+  color: white;
+  height: 40px;
+  margin-top: 32px;
+  width: 300px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal {
+  margin-top: 32px;
+  background-color: #F0F0F0;
+  width: 300px;
+  padding: 8px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch {
+  display: inline-block;
+  height: 15px;
+  position: relative;
+  width: 40px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch .slider {
+  background-color: #C1C1C1;
+  border-radius: 32px;
+  border: 1px solid #C1C1C1;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch .slider:before {
+  background-color: white;
+  border-radius: 50%;
+  bottom: -1px;
+  content: "";
+  height: 15px;
+  left: -1px;
+  outline: 2px solid #C1C1C1;
+  position: absolute;
+  transition: transform 0.25s ease-in-out 0s;
+  width: 15px;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch .slider-icon {
+  height: 8px;
+  opacity: 0;
+  position: absolute;
+  right: 30%;
+  stroke-width: 8;
+  stroke: #222222;
+  top: 10%;
+  transition: right ease-in-out 0.3s, opacity ease-in-out 0.15s;
+  width: 8px;
+  z-index: 999;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch input:checked + .slider {
+  background-color: #000000;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch input:checked + .slider .slider-icon {
+  opacity: 1;
+  right: 10%;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal div .switch input:checked + .slider:before {
+  outline-color: #000000;
+  transform: translateX(1.5em);
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .conteudo_aplicacao_fidelidade main .aplicacao_mensal p {
+  margin-top: 8px;
+  font-size: 0.875rem;
+}
+.investimentos .grid_investimentos .right .celular #aplicacao_cdb_fidelidade .aplicacao_cdb_oculto {
+  animation: fadeOut_block 1s;
   display: none;
 }
 .investimentos .grid_produtos {
@@ -837,8 +1230,4 @@ footer .right p {
 ::-webkit-scrollbar-thumb {
   background-color: #C80000;
   border-radius: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
