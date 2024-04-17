@@ -1,0 +1,107 @@
+footer {
+    background-color: $background_preto;
+    color: $cor_texto_branca;
+    display: flex;
+    padding: 55px 0;
+    justify-content: left;
+    .left {
+        margin-left: 55px;
+        text-align: center;
+        h2 {
+            @include fonte_Peso_32px;
+            
+            &:nth-child(1) {
+                margin-bottom: 32px;
+            }
+        }
+        .cards_footer {
+            .card {
+                align-items: center;
+                border-radius: 10px;
+                border: 1px solid $borda_branca;
+                cursor: pointer;
+                display: flex;
+                height: 80px;
+                margin: 16px 0;
+                width: 300px;
+
+                &:nth-child(2) {
+                    margin-bottom: 30px
+                }
+            }
+            i {
+                margin: 0 16px 0 22px;
+            }
+            div {
+                p {
+                    @include fonte_24px;
+                }
+            }
+        }
+        .imagem {
+            background-image: url(../../imagens/icones/IconeBoxBank.png);
+            height: 60px;
+            margin: 0 auto;
+            width: 55px;
+        }
+    }
+    
+    .center {
+        margin-left: 100px;
+        h2 {
+            @include fonte_Peso_32px;
+            margin-bottom: 32px;
+        }
+        ul {
+            li {
+                @include fonte_24px;
+                cursor: pointer;
+                padding-top: 24px;
+
+                &:hover {
+                    color: $cor_texto_vermelho;
+                }
+            }
+        }
+    }
+    
+    .right {
+        margin-left: auto;
+        margin-right: 95px;
+        h2 {
+            @include fonte_Peso_32px;
+            margin-bottom: 32px;
+        }
+        p {
+            @include fonte_24px;
+            width: 230px;
+
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1366px) {
+    footer {
+        .left {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 800px) {
+    footer {
+        display: flex;
+        justify-content: center;
+        .left {
+            margin: 0;
+        }
+
+        .center {
+            display: none;
+        }
+
+        .right {
+            display: none;
+        }
+    }
+}

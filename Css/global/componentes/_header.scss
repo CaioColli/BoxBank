@@ -1,0 +1,120 @@
+@import './fontes';
+@import './cores';
+
+header {
+    background-color: #ffffff;
+    position: fixed top;
+    width: 100%;
+    z-index: 2;
+
+    .conteudo_header {
+        align-items: center;
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+
+        div {
+            align-items: center;
+            display: flex;
+
+            .imagem {
+                background-image: url(../../imagens/icones/IconeBoxBank.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 35px;
+                height: 45px;
+                margin: 0;
+                margin-left: 32px;
+                width: 45px;
+            }
+
+            ul {
+                display: flex;
+                margin-left: 32px;
+
+                #hover {
+                    cursor: default;
+                }
+
+                li {
+                    cursor: pointer;
+                    padding: 16px;
+                    @include fonte_Peso_16px;
+                }
+            }
+        }
+
+        div {
+            margin-right: 2rem;
+            @include fonte_Peso_16px;
+
+            p {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .conteudo_paraVoce {
+        background-color: $background_branco;
+        height: 0px;
+        overflow: hidden;
+        position: absolute;
+        transition: 0.9s;
+        width: 100%;
+        z-index: 0;
+
+        .lista {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 120px 50px 120px;
+            ul {
+                flex-direction: column;
+
+                h3 {
+                    @include fonte_20px;
+                    padding: 16px;
+                }
+
+                li {
+                    @include fonte_Peso_24px;
+                    cursor: pointer;
+                    padding: 16px;
+                }
+
+                li {
+                    &:hover {
+                        color: $cor_texto_vermelho;
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1366px) {
+    header {
+        .conteudo_paraVoce {
+            .lista {
+                ul {
+                    h3 {
+                        @include fonte_18px;
+                    }
+    
+                    li {
+                        @include fonte_16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        ul {
+            li {
+                display: none;
+            }
+        }
+    }
+}

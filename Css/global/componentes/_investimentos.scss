@@ -1,0 +1,1232 @@
+.investimentos {
+    .grid_investimentos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 0 200px 55px;
+
+        .left {
+            .imagem {
+                background-image: url(../../imagens/icones/IconeBoxBank.png);
+                background-repeat: no-repeat;
+                background-size: 45px;
+                height: 50px;
+                width: 50px;
+            }
+
+            div {
+                h1 {
+                    @include fonte_Peso_48px;
+                    margin: 32px 0 50px 0;
+                }
+
+                p {
+                    @include fonte_24px;
+                    margin-bottom: 50px;
+                    width: 530px;
+                }
+            }
+
+            ul {
+                div {
+                    div {
+                        padding: 16px 0;
+
+                        li {
+                            @include fonte_Peso_48px;
+                            align-items: center;
+                            color: $cor_texto_cinzaClaro;
+                            cursor: default;
+                            display: flex;
+
+                            i {
+                                display: none;
+                                font-size: 16px;
+                                margin-right: 8px
+                            }
+
+                            &:hover {
+                                color: $cor_texto_preto;
+
+                                i {
+                                    display: block;
+                                }
+
+                                +span {
+                                    display: block
+                                }
+                            }
+                        }
+                    }
+
+                    span {
+                        @include fonte_24px;
+                        display: none;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            .celular {
+                user-select: none;
+
+                * {
+                    cursor: url('../../imagens/cursor/cursor.png'), default;
+                }
+
+                border-radius: 32px;
+                border: 8px solid $cor_preto;
+                height: 600px;
+                margin: 0 auto;
+                overflow: hidden;
+                position: relative;
+                width: 330px;
+
+                &::before {
+                    background-color: $cor_preto;
+                    border-radius: 0 0 30px 30px;
+                    content: '';
+                    height: 14px;
+                    left: 0;
+                    margin: 0 auto;
+                    position: absolute;
+                    right: 0;
+                    width: 60px;
+                    z-index: 5;
+                }
+
+                #inicial {
+                    //display: none;
+                    .conteudo_inicial {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        left: 0;
+                        margin-top: 200px;
+                        margin: 200px auto;
+                        opacity: 1;
+                        position: absolute;
+                        right: 0;
+
+                        .conteudo_inicial h1,
+                        .conteudo_inicial h2,
+                        .conteudo_inicial p,
+                        .conteudo_inicial button {
+                            position: absolute;
+                        }
+
+                        h1 {
+                            @include fonte_Peso_32px;
+                            margin: 0;
+                            width: 280px;
+                        }
+
+                        h2 {
+                            @include fonte_24px;
+                            width: 280px;
+                            padding: 16px 0
+                        }
+
+                        p {
+                            @include fonte_16px;
+                        }
+
+                        button {
+                            background-color: $background_vermelho;
+                            border-radius: 50px;
+                            color: $cor_texto_branca;
+                            height: 40px;
+                            margin-top: 16px;
+                            width: 150px;
+                        }
+                    }
+
+                    @keyframes fadeOut_flex {
+                        from {
+                            opacity: 1;
+                            display: flex;
+                        }
+
+                        to {
+                            opacity: 0;
+                            display: none;
+                        }
+                    }
+
+                    .inicial_oculto {
+                        animation: fadeOut_flex 1s;
+                        display: none;
+                    }
+                }
+
+                #carteira_digital {
+                    display: none;
+
+                    .conteudo_carteira {
+                        header {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 8px 0;
+                            position: relative;
+                            text-align: center;
+
+                            i {
+                                padding: 16px;
+                            }
+                        }
+
+                        main {
+                            background: transparent;
+                            padding: 8px;
+
+                            h1 {
+                                @include fonte_Peso_24px;
+                            }
+
+                            h2 {
+                                @include fonte_Peso_20px;
+                            }
+
+                            div {
+                                align-items: center;
+                                display: flex;
+
+                                p {
+                                    @include fonte_Peso_16px;
+                                    color: $cor_texto_verde;
+                                    margin-left: 8px;
+                                }
+                            }
+
+                            button {
+                                @include fonte_16px;
+                                background-color: $background_vermelho;
+                                border-radius: 50px;
+                                color: $cor_texto_branca;
+                                height: 35px;
+                                width: 90px;
+                            }
+
+                            h1,
+                            h2,
+                            div {
+                                margin: 16px 0;
+                            }
+
+                            .balao_investir {
+                                background-color: $background_vermelho;
+                                clip-path: polygon(40% 30%, 40% 50%, 100% 50%, 100% 80%, 40% 80%, 40% 100%, 0 63%);
+                                height: 30px;
+                                position: absolute;
+                                top: 162px;
+                                left: 110px;
+                                width: 40px;
+                                animation: anima_balao 0.8s alternate infinite;
+                            }
+
+                            @keyframes anima_balao {
+                                0% {
+                                    left: 100px;
+                                }
+
+                                50% {
+                                    left: 100px;
+                                }
+
+                                100% {
+                                    left: 110px;
+                                }
+                            }
+                        }
+
+                        section {
+                            padding: 8px;
+                            margin-top: 8px;
+
+                            h2 {
+                                @include fonte_Peso_20px;
+                            }
+
+                            div {
+                                align-items: center;
+                                display: flex;
+                                padding: 16px 0;
+
+                                p:nth-child(1) {
+                                    padding-right: 8px;
+                                }
+
+                                p {
+                                    @include fonte_Peso_16px;
+                                }
+
+                                i {
+                                    padding-right: 4px;
+                                }
+                            }
+
+                            .processo {
+                                align-items: center;
+                                background-color: $background_cinzaClaro;
+                                border-radius: 50px;
+                                display: flex;
+                                height: 20px;
+                                justify-content: space-between;
+                                margin-top: 32px;
+                                margin: 16px auto;
+                                width: 300px;
+
+                                div {
+                                    margin: 0 16px;
+
+                                    p {
+                                        @include fonte_Peso_16px;
+                                        margin-left: 4px;
+                                    }
+                                }
+
+                                .nbr_processos {
+                                    background-color: $background_vermelho;
+                                    border-radius: 500px;
+                                    height: 5px;
+
+                                    #nbr {
+                                        @include fonte_Peso_16px;
+                                        color: $cor_texto_branca;
+                                    }
+                                }
+                            }
+                        }
+
+                        footer {
+                            background-color: $background_cinzaClaro;
+                            height: 200px;
+                            padding: 0;
+
+                            div {
+                                padding: 8px;
+
+                                h2 {
+                                    @include fonte_Peso_20px;
+                                    color: $cor_texto_preto;
+                                }
+
+                                p {
+                                    @include fonte_Peso_16px;
+                                    color: $cor_texto_cinza;
+                                    margin-top: 6px;
+                                }
+
+                                div {
+                                    p {
+                                        @include micro_fonte_Peso;
+                                    }
+
+                                    div {
+                                        margin-top: 8px;
+                                        display: flex;
+                                        align-items: center;
+                                        @include micro_fonte_Peso;
+
+                                        p {
+                                            margin: 0;
+                                            padding: 0 8px;
+                                            color: $cor_texto_preto;
+                                        }
+
+                                        span {
+                                            color: $cor_texto_verde;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @keyframes fadeOut_block {
+                        from {
+                            opacity: 1;
+                            display: block;
+                        }
+
+                        to {
+                            opacity: 0;
+                            display: none;
+                        }
+                    }
+
+                    .carteira_oculto {
+                        animation: fadeOut_block 1s;
+                        display: none;
+                    }
+                }
+
+                #escolhas_investimentos {
+                    display: none;
+
+                    .conteudo_investimentos {
+                        header {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 8px 0;
+                            position: relative;
+                            text-align: center;
+
+                            i {
+                                padding: 16px;
+                            }
+                        }
+
+                        main {
+                            background: transparent;
+                            padding: 8px;
+
+                            h1 {
+                                @include fonte_Peso_24px;
+                            }
+
+                            button {
+                                @include fonte_14px;
+                                background-color: $background_vermelho;
+                                border-radius: 50px;
+                                color: $cor_texto_branca;
+                                height: 40px;
+                                width: 300px;
+                            }
+
+                            div {
+                                align-items: center;
+                                background-color: $background_cinzaClaro;
+                                border-radius: 5px;
+                                display: flex;
+                                height: 80px;
+                                justify-content: center;
+                                width: 300px;
+
+                                div {
+                                    align-items: baseline;
+                                    flex-direction: column;
+                                    margin-left: 10px;
+
+                                    p {
+                                        padding: 6px 0;
+                                        @include fonte_16px;
+                                    }
+
+                                    span {
+                                        @include fonte_Peso_24px;
+                                    }
+                                }
+
+                                i {
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            h1,
+                            button,
+                            div {
+                                margin: 8px 0;
+                            }
+                        }
+
+                        section {
+                            padding-left: 8px;
+
+                            div {
+                                h1 {
+                                    @include fonte_Peso_24px;
+                                    padding-bottom: 8px;
+                                }
+
+                                @keyframes border-animation {
+                                    0% {
+                                        height: 0;
+                                        opacity: 0;
+                                        width: 0;
+                                    }
+
+                                    50% {
+                                        height: 50%;
+                                        opacity: 1;
+                                        width: 50%;
+                                    }
+
+                                    100% {
+                                        height: 100%;
+                                        opacity: 0;
+                                        width: 100%;
+                                    }
+                                }
+
+                                .card_escolhas {
+                                    align-items: center;
+                                    background-color: $background_cinzaClaro;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    height: 80px;
+                                    justify-content: center;
+                                    margin: 16px 0;
+                                    overflow: hidden;
+                                    position: relative;
+                                    width: 300px;
+
+                                    &:nth-child(2)::before,
+                                    &:nth-child(2)::after {
+                                        animation: border-animation 3s linear infinite;
+                                        border: 2px solid $cor_vermelho;
+                                        content: '';
+                                        height: 0;
+                                        position: absolute;
+                                        width: 0;
+                                    }
+
+                                    &:nth-child(2)::before {
+                                        border-bottom: none;
+                                        border-left: none;
+                                        right: 0;
+                                        top: 0;
+                                    }
+
+                                    &:nth-child(2)::after {
+                                        border-right: none;
+                                        border-top: none;
+                                        bottom: 0;
+                                        left: 0;
+                                    }
+
+                                    @mixin formatacao_icones {
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        border-radius: 0;
+                                        height: 40px;
+                                        padding: 0 16px;
+                                        width: 40px;
+                                    }
+
+                                    .icone_cdb {
+                                        @include formatacao_icones;
+                                        background-image: url(../../imagens/icones/icone_grafico_um.svg);
+                                    }
+
+                                    .icone_fundos {
+                                        @include formatacao_icones;
+                                        background-image: url(../../imagens/icones/icone_grafico_dois.svg);
+                                    }
+
+                                    .icone_poupanca {
+                                        @include formatacao_icones;
+                                        background-image: url(../../imagens/icones/icone_moedas.svg);
+                                    }
+
+                                    div {
+                                        align-items: baseline;
+                                        flex-direction: column;
+
+                                        h2 {
+                                            @include fonte_Peso_20px;
+                                        }
+
+                                        p {
+                                            @include micro_fonte_Peso;
+                                        }
+
+                                        h2,
+                                        p {
+                                            width: 244px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .investimentos_oculto {
+                        animation: fadeOut_block 1s;
+                        display: none;
+                    }
+                }
+
+                #tipos_cdb {
+                    display: none;
+
+                    .conteudo_tipos_cdb {
+                        height: 600px;
+                        overflow: scroll;
+
+                        header {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 8px 0;
+                            position: relative;
+                            text-align: center;
+
+                            i {
+                                padding: 16px;
+                            }
+                        }
+
+                        main {
+                            background: transparent;
+                            padding: 8px;
+
+                            h1 {
+                                @include fonte_Peso_24px;
+                            }
+
+                            div {
+                                background-color: $background_cinzaClaro;
+                                border-radius: 5px;
+                                margin-top: 16px;
+                                padding: 8px;
+
+                                h2 {
+                                    @include fonte_Peso_20px;
+                                }
+
+                                div {
+                                    @include fonte_14px;
+                                    border-bottom: 1px solid $borda_cinza;
+                                    border-radius: 0;
+                                    display: flex;
+                                    justify-content: space-between;
+                                }
+
+                                .botoes {
+                                    border: none;
+                                    justify-content: center;
+                                    margin: 16px 0;
+                                    padding: 0;
+
+                                    button {
+                                        @include fonte_16px;
+                                        background-color: $background_vermelho;
+                                        border-radius: 50px;
+                                        color: $cor_texto_branca;
+                                        height: 35px;
+                                        margin: 0 16px;
+                                        width: 90px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &::-webkit-scrollbar {
+                            width: 4px;
+                        }
+                    }
+
+                    .cdb_oculto {
+                        animation: fadeOut_block 1s;
+                        display: none;
+                    }
+                }
+
+                #cdb_fidelidade {
+                    display: none;
+
+                    .conteudo_cdb_fidelidade {
+                        header {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 8px 0;
+                            position: relative;
+                            text-align: center;
+
+                            i {
+                                padding: 16px;
+                            }
+                        }
+
+                        main {
+                            background: transparent;
+                            padding: 8px;
+
+                            h1 {
+                                @include fonte_Peso_24px;
+                                margin: 0;
+                            }
+
+                            form {
+                                .inputs {
+                                    border-bottom: 1px solid $borda_cinza;
+                                    margin-top: 32px;
+                                    width: 280px;
+
+                                    p {
+                                        @include fonte_14px;
+                                    }
+
+                                    div {
+                                        align-items: center;
+                                        display: flex;
+                                        margin: 0;
+
+                                        span {
+                                            padding: 0 4px;
+                                        }
+
+                                        input {
+                                            padding: 8px 0;
+                                            width: 280px;
+
+                                            &::placeholder {
+                                                color: $cor_texto_cinza;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .msg_erro_valor {
+                                    @include micro_fonte_Peso;
+                                    color: $cor_texto_vermelho;
+                                    display: none
+                                }
+
+                                .btn_aplicar_cdb {
+                                    @include fonte_14px;
+                                    background-color: $background_vermelho;
+                                    border-radius: 50px;
+                                    color: $cor_texto_branca;
+                                    height: 40px;
+                                    margin-top: 32px;
+                                    width: 300px;
+                                }
+
+                                .btn_aplicar_cdb_inativo {
+                                    @include fonte_14px;
+                                    background-color: $background_cinzaClaro;
+                                    border-radius: 50px;
+                                    color: $cor_texto_preto;
+                                    height: 40px;
+                                    margin-top: 32px;
+                                    pointer-events: none;
+                                    width: 300px;
+                                }
+                            }
+
+                            .aplicacao_mensal {
+                                margin-top: 32px;
+                                background-color: $background_cinzaClaro;
+                                width: 300px;
+                                padding: 8px;
+
+                                div {
+                                    align-items: center;
+                                    display: flex;
+                                    justify-content: space-between;
+
+                                    h2 {
+                                        @include fonte_Peso_20px;
+                                    }
+
+                                    .switch {
+                                        display: inline-block;
+                                        height: 15px;
+                                        position: relative;
+                                        width: 40px;
+
+                                        input {
+                                            height: 0;
+                                            opacity: 0;
+                                            width: 0;
+                                        }
+
+                                        .slider {
+                                            background-color: $background_cinza;
+                                            border-radius: 32px;
+                                            border: 1px solid $background_cinza;
+                                            bottom: 0;
+                                            left: 0;
+                                            outline: none;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                            transition: 0.4s;
+
+                                            &:before {
+                                                background-color: $cor_branco;
+                                                border-radius: 50%;
+                                                bottom: -1px;
+                                                content: "";
+                                                height: 15px;
+                                                left: -1px;
+                                                outline: 2px solid $borda_cinza;
+                                                position: absolute;
+                                                transition: transform 0.25s ease-in-out 0s;
+                                                width: 15px;
+                                            }
+                                        }
+
+                                        .slider-icon {
+                                            height: 8px;
+                                            opacity: 0;
+                                            position: absolute;
+                                            right: 30%;
+                                            stroke-width: 8;
+                                            stroke: #222222;
+                                            top: 10%;
+                                            transition: right ease-in-out 0.3s, opacity ease-in-out 0.15s;
+                                            width: 8px;
+                                            z-index: 999;
+                                        }
+
+                                        input:checked+.slider {
+                                            background-color: $background_preto;
+
+                                            .slider-icon {
+                                                opacity: 1;
+                                                right: 10%;
+                                            }
+
+                                            &:before {
+                                                outline-color: $cor_preto;
+                                                transform: translateX(1.5em);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                p {
+                                    margin-top: 8px;
+                                    @include fonte_14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .cdb_fidelidade_oculto {
+                        animation: fadeOut_block 1s;
+                        display: none;
+                    }
+                }
+
+                #tela_final {
+                    display: none;
+                    .conteudo_tela_final {
+                        main {
+                            align-items: center;
+                            background: transparent;
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 50px;
+
+                            div {
+                                background-color: $background_cinzaClaro;
+                                border-radius: 5px;
+                                padding: 24px 8px;
+                                width: 290px;
+
+                                h1 {
+                                    @include fonte_Peso_20px;
+                                    margin: 0;
+                                }
+
+                                p {
+                                    @include fonte_16px;
+                                    margin: 16px 0 32px 0;
+                                }
+
+                                .card_escolhas {
+                                    align-items: center;
+                                    background-color: $background_cinza;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    padding: 8px 0;
+                                    margin-top: 16px;
+
+                                    @mixin formatacao_icones_final {
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        margin-left: 8px
+                                    }
+
+                                    .icone_fundos {
+                                        @include formatacao_icones_final;
+                                        background-color: transparent;
+                                        background-image: url(../../imagens/icones/icone_grafico_dois.svg);
+                                        height: 60px;
+                                        padding: 0;
+                                        width: 60px;
+                                    }
+
+                                    .icone_poupanca {
+                                        @include formatacao_icones_final;
+                                        background-color: transparent;
+                                        background-image: url(../../imagens/icones/icone_moedas.svg);
+                                        height: 60px;
+                                        padding: 0;
+                                        width: 60px;
+                                    }
+
+                                    div {
+                                        background-color: transparent;
+                                        padding: 0 8px;
+
+                                        h2 {
+                                            @include fonte_Peso_18px;
+                                        }
+
+                                        p {
+                                            @include fonte_Peso_14px;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .btn_home {
+                                margin-top: 16px;
+                                padding: 0;
+                                background-color: $background_vermelho;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 280px;
+                                height: 50px;
+
+                                .icone_home {
+                                    background-color: transparent;
+                                    background-image: url('../../imagens/icones/icone_home.svg');
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    height: 30px;
+                                    padding: 0;
+                                    width: 30px;
+                                }
+                            }
+
+                            .icone_box {
+                                background-color: transparent;
+                                background-image: url('../../imagens/icones/IconeBoxBank.png');
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: 90%;
+                                height: 40px;
+                                margin-top: 16px;
+                                padding: 0;
+                                width: 40px;
+                            }
+                        }
+                    }
+
+                    .final_oculto {
+                        animation: fadeOut_block 1s;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .grid_produtos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 0 200px 55px;
+
+        .left {
+            h1 {
+                @include fonte_Peso_48px;
+                color: $cor_texto_vermelho;
+                margin-bottom: 140px;
+                text-decoration: line-through;
+                width: 320px;
+            }
+        }
+
+        .right {
+            .conteudo_investimento {
+                h1 {
+                    @include fonte_Peso_48px;
+                }
+
+                p {
+                    @include fonte_24px;
+                    padding: 32px 0;
+                    width: 660px;
+                }
+
+                ul {
+                    div {
+                        div {
+                            padding: 16px 0;
+
+                            li {
+                                @include fonte_Peso_48px;
+                                align-items: center;
+                                color: $cor_texto_cinzaClaro;
+                                cursor: default;
+                                display: flex;
+
+                                i {
+                                    display: none;
+                                    font-size: 16px;
+                                    margin-right: 8px
+                                }
+
+                                &:hover {
+                                    color: $cor_texto_preto;
+
+                                    i {
+                                        display: block;
+                                    }
+
+                                    +span {
+                                        display: block
+                                    }
+                                }
+                            }
+                        }
+
+                        span {
+                            @include fonte_24px;
+                            display: none;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .grid_abrirConta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 0 150px 55px;
+
+        .left {
+            h2 {
+                @include fonte_Peso_32px;
+                margin-bottom: 50px;
+                width: 280px;
+            }
+
+            ul {
+
+                li:first-child {
+                    &:hover {
+                        color: $cor_texto_vermelho;
+                    }
+                }
+
+                li {
+                    @include fonte_24px;
+                    padding: 16px 0;
+
+                    a {
+                        cursor: pointer;
+                    }
+
+                    span {
+                        color: $cor_texto_vermelho;
+                    }
+                }
+            }
+
+            .cards_abrirConta {
+                display: flex;
+                align-items: center;
+
+                .seta {
+                    background-image: url(../../imagens/icones/seta_vermelha.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 140px;
+                    margin: 85px 64px 0 64px;
+                    width: 140px;
+                }
+
+                .card {
+                    align-items: center;
+                    background-color: $background_preto;
+                    border-radius: 5000px;
+                    display: flex;
+                    height: 140px;
+                    justify-content: center;
+                    width: 140px;
+                    margin-top: 85px;
+                }
+
+                @mixin formatacao {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 140px;
+                    width: 140px;
+                }
+
+                .primeiro {
+                    @include formatacao;
+                    background-image: url(../../imagens/icones/icone_dinheiro.svg);
+                }
+
+                .segundo {
+                    @include formatacao;
+                    background-image: url(../../imagens/icones/Icone_saco_dinheiro.svg);
+                }
+            }
+        }
+
+        .right {
+            background-image: url(../../imagens/modelos/Imagem_Investimento.png);
+            border-radius: 5000px;
+            height: 500px;
+            margin: 0 auto;
+            text-align: center;
+            width: 500px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1366px) {
+    .investimentos {
+        .grid_investimentos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .left {
+                .imagem {
+                    display: none;
+                }
+
+                ul {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+
+        .grid_produtos {
+            display: flex;
+            justify-content: center;
+            .left {
+                display: none;
+            }
+        }
+
+        .grid_abrirConta {
+            display: flex;
+            justify-content: center;
+
+            .right {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 800px) {
+    .investimentos {
+        .grid_investimentos {
+            margin: 32px 0 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .left {
+                .imagem {
+                    display: none;
+                }
+
+                div {
+                    h1 {
+                        @include fonte_Peso_32px;
+                        margin: 0 0 16px 0
+                    }
+
+                    p {
+                        @include fonte_24px;
+                        max-width: 300px;
+                    }
+                }
+
+                ul {
+                    margin-bottom: 90px;
+                    div {
+                        div {
+                            li {
+                                @include fonte_Peso_32px;
+                            }
+
+                            span {
+                                max-width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid_produtos {
+            margin: 32px 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .left {
+                display: none;
+            }
+
+            .right {
+                .conteudo_investimento {
+                    h1 {
+                        @include fonte_Peso_32px;
+                        margin: 16px 0 0 0
+                    }
+
+                    p {
+                        @include fonte_24px;
+                        max-width: 300px;
+                        padding: 16px 0;
+                    }
+
+                    ul {
+                        div {
+                            div {
+                                li {
+                                    @include fonte_Peso_32px;
+                                }
+
+                                span {
+                                    max-width: 300px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid_abrirConta {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 80px 0;
+            .left {
+                h2 {
+                    @include fonte_Peso_32px;
+                    margin: 0 0 16px 0;
+                }
+
+                ul {
+                    li {
+                        max-width: 300px;
+                    }
+                }
+
+                .cards_abrirConta {
+                    display: none;
+                }
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    }
+}

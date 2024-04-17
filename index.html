@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Bank</title>
+    <link rel="icon" href="imagens/icones/IconeBoxBank.png">
+    <link rel="stylesheet" href="./css/reset/reset.css">
+    <link rel="stylesheet" href="./Css/Css/style.css">
+    <link rel="stylesheet" href="./imagens/icones/fontawesome/css/all.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="conteudo_header">
+            <div>
+                <div class="imagem"></div>
+                <ul>
+                    <li>Página inicial</li>
+                    <li id="mostrar_conteudo">Para você <i class="fa-solid fa-chevron-down fa-2xs"
+                            style="color: #000000;"></i> </li>
+                    <li>Perguntas</li>
+                </ul>
+            </div>
+            <div>
+                <a href="">
+                    <p>Login <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ff0000;"></i></p>
+                </a>
+            </div>
+        </div>
+
+        <div class=conteudo_paraVoce>
+            <ul class="lista">
+                <ul>
+                    <h3>BoxBank</h3>
+                    <li>Conta do BoxBank</li>
+                    <li>Cartão de crédito</li>
+                    <li>Sobre o Pix </li>
+                </ul>
+                <ul>
+                    <h3>Cartões Box</h3>
+                    <li>Cores</li>
+                    <li>Cashback</li>
+                </ul>
+                <ul>
+                    <h3>Box Shopping</h3>
+                    <li>Parcerias</li>
+                    <li>Facilidades</li>
+                    <li>Promoções</li>
+                </ul>
+                <ul>
+                    <h3>Box Investimentos</h3>
+                    <li>Produtos mais polulares</li>
+                    <li>Como investir</li>
+                    <li>Corretagem</li>
+                </ul>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="conteudo_main">
+            <div>
+                <span>Diversas possibilidades na palma da sua mão</p>
+            </div>
+
+            <form data-formularioCPF>
+                <label for="cpf">Faça sua conta e garanta seu cartão de crédito do BoxBank</label>
+                <input type="text" name="cpf" class="input_cpf" data-inputCPF placeholder="Digite seu CPF"
+                    minlength="11" maxlength="14" required>
+
+                <p data-inputVazio>Preencha o campo para prosseguir</p>
+                <p data-inputInvalido>Digite um CPF válido</p>
+
+                <input type="submit" class="btn_submit" value="Continuar" data-inputEnviar>
+            </form>
+        </div>
+    </main>
+
+    <section class="vantagens">
+        <div class="titulo_vantagens">
+            <h2>Conta Box</h2>
+            <p>No BoxBank você faz tudo pelo app com todas as vantagens disponíveis.</p>
+        </div>
+
+        <div class="cards_vantagens">
+            <div class="card">
+                <div>
+                    <!-- fa-lg TALVEZ -->
+                    <i class="fa-solid fa-credit-card fa-xl" style="color: #000000;"></i>
+                    <h4>Cartões Box</h4>
+                    <p>Escolha o design do seu cartão que mais combina com você.</p>
+                    <button>Veja as opções <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-credit-card fa-xl" style="color: #000000;"></i>
+                    <h4>Cartão Virtual</h4>
+                    <p>Crie novos cartões virtuais de crédito e débito no app e se proteja ainda mais.</p>
+                    <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-money-bill-wave fa-xl" style="color: #000000;"></i>
+                    <h4>Pix</h4>
+                    <p>Um novo jeito de fazer pagamentos a hora que preferir.</p>
+                    <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-arrow-trend-up fa-xl" style="color: #000000;"></i>
+                    <h4>Investimentos</h4>
+                    <p>Uma carteira completa para qualquer tipo de perfil de investidor.</p>
+                    <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>
+                    <h4>Box Shopping</h4>
+                    <p>Um shopping que oferece o que você precisa com cashback até de 15% </p>
+                    <button>Saiba mais <i class="fa-solid fa-arrow-right" style="color: #c80000;"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_shopping">
+            <div class="left">
+                <div class="titulo_shopping">
+                    <h2>Box Shopping</h2>
+                    <p>Faça sua compras nas maiores lojas do país com cashback e descontos imperdiveis. </p>
+                </div>
+
+                <div class="cards_shopping">
+                    <div class="card">
+                        <div class="primeiro"></div>
+                    </div>
+                    <div class="card">
+                        <div class="segundo"></div>
+                    </div>
+                    <div class="card">
+                        <div class="terceiro"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right"></div>
+
+            <div class="parcerias_shopping">
+                <h2>Parcerias Box</h2>
+                <div class="lojas">
+                    <div class="loja_1"></div>
+                    <div class="loja_2"></div>
+                    <div class="loja_3"></div>
+                    <div class="loja_4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="investimentos">
+        <div class="grid_investimentos">
+            <div class="left">
+                <div class="imagem"></div>
+                <div>
+                    <h1>Aplicativo BoxBank</h1>
+                    <p>Para quem está no começo e quer aprender a investir com segurança</p>
+                </div>
+                <ul>
+                    <div>
+                        <div>
+                            <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Sem Complexidade</li>
+                            <span>Experiência fácil e intuitiva</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Taxa Zero</li>
+                            <span>De corretagem para a renda fixa e afins</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Acessível</li>
+                            <span>Opções a partir de R$ 1</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="right">
+                <div class="celular">
+
+                    <div id="inicial">
+                        <div class="conteudo_inicial">
+                            <h1>Utilize nosso App</h1>
+                            <h2>E descubra como é fácil investir no BoxBank</h2>
+                            <p>Clique no botão abaixo e faça a magia !</p>
+                            <button id="btn_inicial">Clique aqui !</button>
+                        </div>
+                    </div>
+
+                    <div id="carteira_digital">
+                        <div class="conteudo_carteira">
+                            <header>
+                                <i id="btn_voltar_inicio" class="fa-solid fa-chevron-left fa-xl"
+                                    style="color: #000000;"></i>
+                                <i class="fa-solid fa-question fa-xl" style="color: #000000;"></i>
+                            </header>
+
+                            <main>
+                                <h1>Seus investimentos</h1>
+                                <h2>R$ <span id="dinheiro_investido"></span>255,00</h2>
+                                <div>
+                                    <i class="fa-solid fa-arrow-up-long fa-sm" style="color: #2e5e56;"></i>
+                                    <p>R$ 15,00 de rendimento total</p>
+                                </div>
+                                <button id="btn_investir">Investir</button>
+                                <div class="balao_investir"></div>
+                            </main>
+
+                            <section>
+                                <h2>Fundo investido</h2>
+                                <div>
+                                    <p>R$ <span>255,00</span></p>
+                                    <i class="fa-solid fa-arrow-up-long fa-2xs" style="color: #2e5e56;"></i>
+                                    <p style="color: #2e5e56;">R$ 15,00</p>
+                                </div>
+
+                                <div class="processo">
+                                    <div>
+                                        <i class="fa-regular fa-clock fa-lg" style="color: #000000;"></i>
+                                        <p>Em processo</p>
+                                    </div>
+
+                                    <div class="nbr_processos">
+                                        <div id="nbr">2</div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <footer>
+                                <div>
+                                    <h2>Movimentações</h2>
+                                    <p>Concluídas</p>
+
+                                    <div>
+                                        <p>13/09/2023</p>
+                                        <div>
+                                            <i class="fa-solid fa-money-bill-transfer fa-lg"
+                                                style="color: #000000;"></i>
+                                            <p>Aplicação</p>
+                                            <span>R$ 200,00</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>09/09/2023</p>
+                                        <div>
+                                            <i class="fa-solid fa-money-bill-transfer fa-lg"
+                                                style="color: #000000;"></i>
+                                            <p>Aplicação</p>
+                                            <span>R$ 40,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <div id="escolhas_investimentos">
+                        <div class="conteudo_investimentos">
+                            <header>
+                                <i id="btn_voltar_carteira" class="fa-solid fa-chevron-left fa-xl"
+                                    style="color: #000000;"></i>
+                                <i class="fa-solid fa-question fa-xl" style="color: #000000;"></i>
+                            </header>
+
+                            <main>
+                                <h1>Comece a investir</h1>
+                                <button>DESCUBRA SEU PERFIL</button>
+                                <div>
+                                    <div>
+                                        <p>Saldo disponível em conta</p>
+                                        <span>R$ <span>••••••••</span></span>
+                                    </div>
+                                    <i class="fa-regular fa-eye-slash fa-xl" style="color: #000000;"></i>
+                                </div>
+                            </main>
+
+                            <section>
+                                <div>
+                                    <h1>Escolha uma opção</h1>
+
+                                    <div class="card_escolhas" id="card_cdb">
+                                        <div class="icone_cdb"></div>
+                                        <div>
+                                            <h2>CDB</h2>
+                                            <p>Invista no CDB com segurança e rendimentos maiores que a poupança.</p>
+                                        </div>
+                                    </div>
+                                    <div class="card_escolhas">
+                                        <div class="icone_fundos"></div>
+                                        <div>
+                                            <h2>FUNDOS</h2>
+                                            <p>Especialistas cuidando do seu dinheiro!</p>
+                                        </div>
+                                    </div>
+                                    <div class="card_escolhas">
+                                        <div class="icone_poupanca"></div>
+                                        <div>
+                                            <h2>Poupança</h2>
+                                            <p>Guarde seu dinheiro, receba rendimentos mensais podendo retirar quando
+                                                quiser!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div id="tipos_cdb">
+                        <div class="conteudo_tipos_cdb">
+                            <header>
+                                <i id="btn_voltar_investimentos" class="fa-solid fa-chevron-left fa-xl"
+                                    style="color: #000000;"></i>
+                                <i class="fa-solid fa-question fa-xl" style="color: #000000;"></i>
+                            </header>
+
+                            <main>
+                                <h1>Escolha seu produto</h1>
+
+                                <div>
+                                    <h2>CDB Fidelidade</h2>
+
+                                    <div>
+                                        <p>Risco</p>
+                                        <p>Muito Baixo</p>
+                                    </div>
+                                    <div>
+                                        <p>Rentabilidade</p>
+                                        <p>Até 104% do CDI</p>
+                                    </div>
+                                    <div>
+                                        <p>Aplicação mínima</p>
+                                        <p>R$ 500,00</p>
+                                    </div>
+                                    <div>
+                                        <p>Resgate</p>
+                                        <p>Mesmo dia útil</p>
+                                    </div>
+
+                                    <div class="botoes">
+                                        <button>Detalhes</button>
+                                        <button id="investir_cdb_fidelidade">Investir</button>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <h2>Box CDB</h2>
+
+                                    <div>
+                                        <p>Risco</p>
+                                        <p>Muito Baixo</p>
+                                    </div>
+                                    <div>
+                                        <p>Rentabilidade</p>
+                                        <p>Até 99% do CDI</p>
+                                    </div>
+                                    <div>
+                                        <p>Aplicação mínima</p>
+                                        <p>R$ 10,00</p>
+                                    </div>
+                                    <div>
+                                        <p>Resgate</p>
+                                        <p>Mesmo dia útil</p>
+                                    </div>
+
+                                    <div class="botoes">
+                                        <button>Detalhes</button>
+                                        <button id="investir_box_cdb">Investir</button>
+                                    </div>
+
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+
+                    <div id="cdb_fidelidade">
+                        <div class="conteudo_cdb_fidelidade">
+                            <header>
+                                <i id="btn_voltar_tipos_cdb" class="fa-solid fa-chevron-left fa-xl"
+                                    style="color: #000000;"></i>
+                                <i class="fa-solid fa-question fa-xl" style="color: #000000;"></i>
+                            </header>
+
+                            <main>
+                                <h1>Qual o valor da aplicação?</h1>
+
+                                <form id="fomulario_cdb_fidelidade">
+                                    <div class="inputs">
+                                        <p>Valor da aplicação</p>
+    
+                                        <div>
+                                            <span>R$</span>
+                                            <input type="text" id="valor_cdb_fidelidade" placeholder="500.00">
+                                        </div>
+                                    </div>
+
+                                    <span id="msg_erro_valor_minimo" class="msg_erro_valor">O valor de aplicação mínima é de R$ 500.00</span>
+    
+                                    <div class="inputs">
+                                        <p>Data da aplicação</p>
+    
+                                        <div>
+                                            <input type="date" id="data_atual">
+                                        </div>
+                                    </div>
+    
+                                    <button class="btn_aplicar_cdb_inativo" id="btn_aplicar_cdb_inativo">Continuar</button>
+                                </form>
+
+                                <div class="aplicacao_mensal">
+                                    <div>
+                                        <h2>Aplicação Mensal</h2>
+
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider">
+                                                <svg class="slider-icon" viewBox="0 0 32 32"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                    role="presentation">
+                                                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <p>Você escolhe um dia e um valor pro seu dinheiro ser aplicado automaticamente. </p>
+                                </div>
+
+                            </main>
+                        </div>
+                    </div>
+
+                    <div id="tela_final">
+                        <div class="conteudo_tela_final">
+                            <main>
+                                <div>
+                                    <h1>Aplicação feita com sucesso!</h1>
+                                    <p>Viu como é fácil e rápido aplicar na BoxBank ?</p>
+
+                                    <h1>Veja também: </h1>
+                                    
+                                    <div class="card_escolhas">
+                                        <div class="icone_fundos"></div>
+                                        <div>
+                                            <h2>FUNDOS</h2>
+                                            <p>Especialistas cuidando do seu dinheiro!</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card_escolhas">
+                                        <div class="icone_poupanca"></div>
+                                        <div>
+                                            <h2>Poupança</h2>
+                                            <p>Guarde seu dinheiro, receba rendimentos mensais podendo retirar quando
+                                            quiser!</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn_home" id="btn_home">
+                                    <div class="icone_home"></div>
+                                </div>
+
+                                <div class="icone_box"></div>   
+                            </main>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_produtos">
+            <div class="left">
+                <h1>“Dinheiro na poupança rende mais”</h1>
+                <img src="imagens/celulares/celular_produtos.png" alt="">
+            </div>
+            <div class="right">
+                <div class="conteudo_investimento">
+                    <h1>Investir é feito para você !</h1>
+                    <p>Despeça-se de todos os equívocos que você já ouviu sobre investimentos.
+                        <br>
+                        Para você aprender, planejar, diversificar e alcançar seus sonhos.
+                    </p>
+                </div>
+
+                <div class="conteudo_investimento">
+                    <h1>Os melhores produtos !</h1>
+                    <p>As melhores oportunidades para quem já sabe investir e quer ir além.</p>
+
+                    <ul>
+                        <div>
+                            <div>
+                                <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Diversificação</li>
+                                <span>Portfólio com milhares de produtos</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Corretagem Zero</li>
+                                <span>Para renda fixa, ações e BDRs</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <li><i class="fa-solid fa-circle fa-xs" style="color: #8d0000;"></i>Praticidade</li>
+                                <span>De fácil entendimento e intuitivo</span>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_abrirConta">
+            <div class="left">
+                <h2>Aproveite a taxa zero para:</h2>
+
+                <ul>
+                    <a href="">
+                        <li>Abrir sua conta
+                            <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ff0000;"></i>
+                        </li>
+                    </a>
+                    <li>Manter seu dinheiro em <span>custódia</span></li>
+                    <li>Investir em ações, BDRs e muitos mais sem corretagem</li>
+                </ul>
+
+                <div class="cards_abrirConta">
+                    <div class="card">
+                        <div class="primeiro"></div>
+                    </div>
+                    <div class="seta"></div>
+                    <div class="card">
+                        <div class="segundo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="left">
+            <h2>Baixe o App</h2>
+            <div class="cards_footer">
+                <div class="card">
+                    <i class="fa-brands fa-google-play fa-2xl" style="color: #ffffff;"></i>
+                    <div>
+                        <p>Disponível no <h2>Google Play</h2>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-apple fa-2xl" style="color: #ffffff;"></i>
+                    <div>
+                        <p>Disponível no <h2>App Store</h2>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="imagem"></div>
+        </div>
+
+        <div class="center">
+            <h2>Informações</h2>
+            <ul>
+                <li>Caixas Eletrônicos</li>
+                <li>Diretrizes de Privacidade</li>
+                <li>Documentos Importantes</li>
+                <li>Procon</li>
+                <li>Código do Consumidor</li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <h2>Sobre</h2>
+            <p>Projeto afins de estudo se tratando de um projeto ao portfólio profissional de Caio Colli</p>
+        </div>
+    </footer>
+
+    
+    <script src="script/valida_cpf.js"></script>
+    <script src="script/interacoes.js"></script>
+</body>
+
+</html>

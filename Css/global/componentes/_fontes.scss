@@ -1,0 +1,72 @@
+html, body {
+    font-family: Arial, sans-serif;
+}
+
+@mixin micro_fonte_Peso {
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+@mixin micro_fonte {
+    font-size: .75rem;
+}
+
+@mixin fonte_Peso_14px {
+    font-size: .875rem;
+    font-weight: bold; 
+}
+
+@mixin fonte_14px {
+    font-size: .875rem;
+}
+
+@mixin fonte_Peso_16px {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@mixin fonte_16px {
+    font-size: 1rem;
+}
+
+@mixin fonte_18px {
+    font-size: 1.125rem;
+}
+
+@mixin fonte_Peso_18px {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+@mixin fonte_Peso_20px {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+@mixin fonte_20px {
+    font-size: 1.25rem;
+}
+
+@mixin fonte_Peso_24px {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@mixin fonte_24px {
+    font-size: 1.5rem;
+}
+
+@mixin fonte_Peso_32px {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@mixin fonte_32px {
+    font-size: 2rem;
+}
+
+@mixin fonte_Peso_48px {
+    font-size: 3rem;
+    font-weight: bold;
+}
+

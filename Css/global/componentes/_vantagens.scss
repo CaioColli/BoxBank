@@ -1,0 +1,305 @@
+section {
+    .titulo_vantagens {
+        margin-top: 4rem;
+        margin: 64px 55px 64px 55px;
+
+        h2 {
+            @include fonte_Peso_32px;
+            margin-bottom: 1rem
+        }
+
+        p {
+            @include fonte_32px;
+            width: 342px;
+        }
+    }
+
+    .cards_vantagens {
+        display: flex;
+        margin: 0 0 200px 55px;
+
+        .card {
+            background-color: $background_cinzaClaro;
+            border-radius: 5px;
+            height: 250px;
+            margin-right: 60px;
+            width: 250px;
+
+            div {
+                margin: 0;
+                margin-left: 16px;
+
+                i {
+                    margin-top: 32px
+                }
+
+                h4 {
+                    @include fonte_Peso_18px;
+                    margin-top: 20px;
+                }
+
+                p {
+                    @include fonte_16px;
+                    margin-bottom: 0px;
+                    margin-top: 28px;
+                    width: 190px;
+                }
+
+                button {
+                    @include fonte_Peso_16px;
+                    color: $cor_texto_vermelho;
+                    cursor: pointer;
+                    display: inline-block;
+                    padding-bottom: 5px;
+                    position: relative;
+                    transition: border-bottom 0.3s ease;
+                
+                    &::after {
+                        background-color: $cor_vermelho;
+                        bottom: 0;
+                        content: '';
+                        height: 2px;
+                        left: 0;
+                        position: absolute;
+                        width: 0px;
+                        transition: width 0.3s;
+                    }
+                
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .grid_shopping {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .left {
+            .titulo_shopping {
+                margin: 64px 55px 64px 55px;
+
+                h2 {
+                    @include fonte_Peso_32px;
+                    margin-bottom: 1rem
+                }
+
+                p {
+                    @include fonte_32px;
+                    width: 630px;
+                }
+            }
+
+            .cards_shopping {
+                display: flex;
+                margin-left: 55px;
+
+                .card {
+                    .primeiro, .segundo, .terceiro {
+                        align-items: center;
+                        background-color: $background_preto;
+                        color: $cor_branco;
+                        display: flex;
+                        height: 140px;
+                        justify-content: center;
+                        width: 140px;
+                        margin-right: 60px;
+                        border-radius: 5000px;
+                    }
+
+                    @mixin formatacao {
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 80px;
+                    }
+
+                    .primeiro {
+                        @include formatacao;
+                        background-image: url(../../imagens/icones/Icone_CashBack.svg);
+                    }
+
+                    .segundo {
+                        @include formatacao;
+                        background-image: url(../../imagens/icones/Icone_SmartPhone.svg);
+                        background-size: 60px
+                    }
+
+                    .terceiro {
+                        @include formatacao;
+                        background-image: url(../../imagens/icones/Icone_Shopping.svg);
+                    }
+                }
+            }
+        }
+
+        .right {
+            background-image: url(../../imagens/modelos/Imagem_shopping.png);
+            border-radius: 5000px;
+            height: 500px;
+            margin: 0 auto;
+            text-align: center;
+            width: 500px;
+        }
+
+        .parcerias_shopping {
+            margin-left: 55px;
+            margin: 0 0 200px 55px;
+
+            h2 {
+                @include fonte_Peso_32px;
+                margin-bottom: 1rem
+            }
+
+            .lojas {
+                display: flex;
+
+                @mixin formatacaoLojas {
+                    background-position: center;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 140px;
+                    padding: 0 16px;
+                    width: 140px;
+                }
+                
+                .loja_1 {
+                    @include formatacaoLojas;
+                    background-image: url(../../imagens/lojas/Magalu.png);
+                }
+
+                .loja_2 {
+                    @include formatacaoLojas;
+                    background-image: url(../../imagens/lojas/CasasBahia.png);
+                }
+
+                .loja_3 {
+                    @include formatacaoLojas;
+                    background-image: url(../../imagens/lojas/Centauro.png);
+                    background-size: 190px;
+                }
+
+                .loja_4 {
+                    @include formatacaoLojas;
+                    background-image: url(../../imagens/lojas/FastShop.png);
+                } 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1366px) {
+    .vantagens {
+        .titulo_vantagens {
+            p {
+                width: 100%;
+            }
+        }
+        .cards_vantagens {
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                margin: 16px 16px;
+            }
+        }
+
+        .grid_shopping {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 180px 0;
+
+            .right {
+                display: none;
+            }
+
+            .parcerias_shopping {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+
+                h2 {
+                    margin: 64px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 800px) {
+    .vantagens {
+        .titulo_vantagens {
+            p {
+                width: 100%;
+            }
+        }
+        .cards_vantagens {
+            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                margin: 16px 16px;
+            }
+        }
+
+        .grid_shopping {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 120px 0;
+
+            .left {
+                .titulo_shopping {
+                    h2 {
+                        @include fonte_Peso_24px;
+                    }
+
+                    p {
+                        @include fonte_24px;
+                        max-width: 360px;
+                    }
+                }
+                
+                .cards_shopping {
+                    .card {
+                        .primeiro, .segundo, .terceiro {
+                            width: 80px;
+                            height: 80px;
+                            background-size: 45%;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                display: none;
+            }
+
+            .parcerias_shopping {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+
+                h2 {
+                    @include fonte_Peso_24px;
+                    margin: 64px 0 0 0;
+                }
+
+                .lojas {
+                    .loja_1, .loja_2, .loja_3, .loja_4 {
+                        width: 80px;
+                        height: 80px;
+                        background-size: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
